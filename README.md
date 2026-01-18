@@ -1,79 +1,109 @@
-🇬🇧 English Skills Exam - Simulador de Examen Profesional
-Este es mi proyecto personal para practicar inglés. Se trata de un simulador de exámenes profesionales de inglés con diferentes modos de práctica, diseñado para ser seguro, responsive y visualmente atractivo.
+🇬🇧 English Skills Exam
+Simulador de Examen Profesional de Inglés
+
+Proyecto personal creado para practicar y reforzar el inglés de forma estructurada, mediante un simulador de exámenes profesionales con distintos modos de práctica.
+El enfoque está en la usabilidad, la seguridad, el diseño responsive y una experiencia visual cuidada.
 
 ✨ Características principales
-🎓 Examen General: 30 preguntas variadas de todos los temas
+🎓 Modos de examen
 
-🎯 Modos específicos:
+Examen General
 
-Modals (must, should, can, might...)
+30 preguntas variadas de todos los temas
 
-Pronouns (who, which, whose, myself...)
+Modos específicos
 
-Tenses (pasado, presente, perfecto...)
+Modals: must, should, can, might…
 
-Mixed Grammar (For/Since, Passive, Conditionals)
+Pronouns: who, which, whose, myself…
 
-Future Forms (Will, Going to, Present Continuous)
+Tenses: pasado, presente, perfecto…
 
-⚙️ Personalización visual:
+Mixed Grammar: for / since, passive voice, conditionals
 
-Modo oscuro y claro
+Future Forms: will, going to, present continuous
 
-Modo sepia con control de intensidad
+📊 Sistema de puntuación
 
-Interfaz responsive (funciona en móviles y escritorio)
+Respuesta correcta: +0.33 puntos
 
-📊 Sistema de puntuación:
+Cada 3 respuestas incorrectas: -0.33 puntos
 
-Correctas: +0.33 puntos
+Estadísticas y progreso en tiempo real
 
-3 incorrectas: -0.33 puntos
+Visualización clara de resultados al finalizar
 
-Seguimiento en tiempo real de estadísticas
+🎨 Personalización visual
 
-🚀 Cómo usar
-Inicio: Selecciona un modo de práctica desde la pantalla principal
+🌙 Modo oscuro y modo claro
 
-Examen: Responde las preguntas (puedes navegar entre ellas)
+📜 Modo sepia con control de intensidad
 
-Resultados: Revisa tu puntuación y las respuestas correctas
+📱 Interfaz totalmente responsive
 
-Seguimiento: Observa tu progreso entre exámenes
+Experiencia optimizada para móvil y escritorio
+
+🚀 Cómo usar el simulador
+
+Inicio
+Selecciona el modo de práctica desde la pantalla principal.
+
+Examen
+Responde las preguntas y navega libremente entre ellas.
+
+Resultados
+Consulta tu puntuación final y las respuestas correctas.
+
+Seguimiento
+Analiza tu progreso entre distintos exámenes.
 
 🛠️ Tecnologías utilizadas
+
 HTML5 semántico
 
-CSS3 moderno (Flexbox, Grid, Variables CSS)
+CSS3 moderno
 
-JavaScript vanilla (sin frameworks)
+Flexbox
 
-Google Fonts (Poppins)
+Grid
 
-Seguridad OWASP Top 10 compliant
+Variables CSS
+
+JavaScript Vanilla (sin frameworks)
+
+Google Fonts – Poppins
+
+Buenas prácticas de seguridad
+
+Compatible con OWASP Top 10
 
 📱 Compatibilidad
+
 ✅ Navegadores modernos (Chrome, Firefox, Safari, Edge)
-
 ✅ Dispositivos móviles y tablets
+✅ Funcionamiento offline tras la carga inicial
 
-✅ Modo offline después de cargar
+🎨 Diseño y experiencia de usuario
 
-🎨 Diseño
 Interfaz limpia y profesional
 
-Animaciones suaves y transiciones
+Animaciones suaves y transiciones naturales
 
 Paleta de colores accesible
 
-Iconos intuitivos
+Iconografía intuitiva
 
-🤝 Contribuir
-Si encuentras algún error o tienes sugerencias:
+Enfoque en claridad y concentración durante el examen
 
-Abre un Issue
+🤝 Contribuciones
 
-O envía un Pull Request con mejoras
+Las contribuciones son bienvenidas 🙌
+
+Abre un Issue si detectas errores o mejoras
+
+Envía un Pull Request con cambios propuestos
 
 📄 Licencia
-Proyecto personal - Libre para uso educativo
+
+Proyecto personal
+📚 Libre para uso educativo
