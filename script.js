@@ -1287,13 +1287,17 @@ let generalExamState = {
     totalExams: 5,
     examResults: [],
     score: 0,
-    consecutiveIncorrect: 0
+    consecutiveIncorrect: 0,
+    correct: 0,
+    incorrect: 0
 };
 
 let singleModeState = {
     active: false,
     score: 0,
-    consecutiveIncorrect: 0
+    consecutiveIncorrect: 0,
+    correct: 0,
+    incorrect: 0
 };
 
 // Referencias DOM
@@ -1311,12 +1315,12 @@ const restartBtn = document.getElementById('restart-btn');
 const currentExamEl = document.getElementById('current-exam');
 const scoreEl = document.getElementById('score');
 const settingsBtn = document.getElementById('settings-btn');
-const settingsModal = document.getElementById('settings-modal');
-const closeSettingsBtn = document.getElementById('close-settings');
+const settingsDropdown = document.getElementById('settings-dropdown');
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 const sepiaModeToggle = document.getElementById('sepia-mode-toggle');
 const sepiaSlider = document.getElementById('sepia-slider');
 const sepiaControls = document.getElementById('sepia-controls');
+const scrollTopBtn = document.getElementById('scroll-top-btn');
 
 function init() {
     setupEventListeners();
@@ -1347,11 +1351,36 @@ function setupEventListeners() {
     nextExamBtn.addEventListener('click', nextGeneralExamStep);
     restartBtn.addEventListener('click', fullRestart);
 
-    // Settings
-    settingsBtn.addEventListener('click', () => settingsModal.classList.add('active'));
-    closeSettingsBtn.addEventListener('click', () => settingsModal.classList.remove('active'));
+    // Settings Dropdown
+    settingsBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        settingsDropdown.classList.toggle('active');
+    });
+
+    // Close Dropdown when clicking outside
     window.addEventListener('click', (e) => {
-        if (e.target === settingsModal) settingsModal.classList.remove('active');
+        if (!settingsDropdown.contains(e.target) && e.target !== settingsBtn) {
+            settingsDropdown.classList.remove('active');
+        }
+    });
+
+    // Scroll to Top
+    window.addEventListener('scroll', toggleScrollTopBtn);
+    scrollTopBtn.addEventListener('click', scrollToTop);
+}
+
+function toggleScrollTopBtn() {
+    if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 }
 
@@ -1415,7 +1444,9 @@ function startGeneralExamSequence() {
         totalExams: 1, // UPDATED: Just 1 exam of 30 questions
         examResults: [],
         score: 0,
-        consecutiveIncorrect: 0
+        consecutiveIncorrect: 0,
+        correct: 0,
+        incorrect: 0
     };
     singleModeState.active = false;
     currentExamEl.textContent = `General`;
@@ -1447,7 +1478,9 @@ function startSingleTopicExam(mode) {
     singleModeState = {
         active: true,
         score: 0,
-        consecutiveIncorrect: 0
+        consecutiveIncorrect: 0,
+        correct: 0,
+        incorrect: 0
     };
 
     let questions = getQuestionsByMode(mode, 15);
@@ -1491,9 +1524,20 @@ function renderQuestions(questions) {
                 `).join('')}
             </div>
             <div class="feedback" id="feedback-${index}"></div>
+            <div class="hint-container">
+                <button class="btn-hint" id="hint-btn-${index}">💡 Ver pista</button>
+                <div class="hint-content hidden" id="hint-content-${index}">${q.tip}</div>
+            </div>
         `;
 
         // Attach event listeners programmatically (CSP Compliant)
+        const hintBtn = qEl.querySelector(`#hint-btn-${index}`);
+        const hintContent = qEl.querySelector(`#hint-content-${index}`);
+        hintBtn.addEventListener('click', () => {
+            hintContent.classList.toggle('hidden');
+            hintBtn.textContent = hintContent.classList.contains('hidden') ? '💡 Ver pista' : '🙈 Ocultar pista';
+        });
+
         const opts = qEl.querySelectorAll('.option');
         opts.forEach((opt, i) => {
             opt.addEventListener('click', () => selectOption(index, i));
@@ -1531,15 +1575,46 @@ function selectOption(qIndex, optIndex) {
     const feedbackEl = card.querySelector('.feedback');
     feedbackEl.innerHTML = isCorrect ?
         `<strong>¡Correcto!</strong>` :
-        `<strong>Incorrecto</strong><br>La respuesta correcta era: "<strong>${currentQ.options[currentQ.correct]}</strong>"<div class="tip">💡 Tip: ${currentQ.tip}</div>`;
+        `<strong>Incorrecto</strong><br>La respuesta correcta era: "<strong>${currentQ.options[currentQ.correct]}</strong>"`;
 
     feedbackEl.className = `feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+
+    // Auto-show hint on incorrect answer if not already visible
+    const hintContent = card.querySelector('.hint-content');
+    const hintBtn = card.querySelector('.btn-hint');
+    if (!isCorrect) {
+        hintContent.classList.remove('hidden');
+        hintBtn.textContent = '🙈 Ocultar pista';
+    }
 
     // Disable further interactions on this question
     opts.forEach(opt => {
         opt.style.pointerEvents = 'none';
         opt.style.cursor = 'default';
     });
+
+    // --- REAL-TIME SCORING UPDATE ---
+    let currentState = singleModeState.active ? singleModeState : generalExamState;
+
+    if (isCorrect) {
+        currentState.correct++;
+        currentState.score += 0.33;
+        currentState.consecutiveIncorrect = 0;
+    } else {
+        currentState.incorrect++;
+        currentState.consecutiveIncorrect++;
+
+        // Penalty for every 3rd incorrect answer
+        if (currentState.consecutiveIncorrect >= 3) {
+            currentState.score -= 0.33;
+            currentState.consecutiveIncorrect = 0;
+        }
+    }
+
+    // Clamp score to 0 if negative
+    if (currentState.score < 0) currentState.score = 0;
+
+    updateStatsDisplay();
 }
 
 function navigateQuestion(direction) {
@@ -1581,28 +1656,35 @@ function finishCurrentExam() {
         if (isCorrect) {
             correct++;
             examScore += 0.33;
-            currentState.consecutiveIncorrect = 0;
+            // Note: Consecutive incorrect tracking for *examScore* calculation here would be complex if we wanted to replicate the exact per-exam score logic distinct from the global one.
+            // But since we are accumulating globally, we just want to know how well they did on *this* specific set for the log.
+            // For simplicity in the log, we track raw correct/incorrect.
+            // If we wanted to track points specifically for this exam including penalties, we'd need a local consecutive tracking.
         } else {
             incorrect++;
-            currentState.consecutiveIncorrect++;
 
-            // Lógica de penalización actualizada: -0.33 pts cada 3 incorrectas
-            if (currentState.consecutiveIncorrect >= 3) {
-                examScore -= 0.33;
-                currentState.consecutiveIncorrect = 0;
-            }
+            // Local tracking for this exam's specific score calculation
+            // We can't reuse currentState.consecutiveIncorrect because that's global/live.
         }
     });
 
-    if (examScore < 0) examScore = 0;
+    // We used to update tracking state here. Now we ONLY handle the logging/UI transition.
+    // The currentState.score is ALREADY updated by selectOption.
 
     if (singleModeState.active) {
-        singleModeState.score += examScore;
-        showSingleExamResults(correct, incorrect, examScore);
+        // Score is already up to date.
+        // We pass the global score or the exam specific score?
+        // showSingleExamResults usually shows the score achieved.
+        // Let's pass the *current total score* as requested by the function signature usually used for "final score".
+        showSingleExamResults(correct, incorrect, singleModeState.score);
     } else {
-        generalExamState.score += examScore;
-        generalExamState.examResults.push({ correct, incorrect, score: examScore });
-        showSingleExamResults(correct, incorrect, examScore);
+        // generalExamState.score is already updated.
+        // We push the *stats for this specific exam* to results. 
+        // Note: 'examScore' calculated above in the loop is slightly inaccurate now because it doesn't track consecutive penalties strictly per-exam if it spans exams (though general exam is just 1 now).
+        // Let's just push correct/incorrect counts which are accurate.
+        generalExamState.examResults.push({ correct, incorrect, score: generalExamState.score });
+
+        showSingleExamResults(correct, incorrect, generalExamState.score);
     }
 }
 
@@ -1704,11 +1786,16 @@ function hideAllSections() {
 function resetStats() {
     scoreEl.textContent = '0.00';
     currentExamEl.textContent = '-';
+    // Reset stats display
+    document.getElementById('correct-count').textContent = '0';
+    document.getElementById('incorrect-count').textContent = '0';
 }
 
 function updateStatsDisplay() {
     let s = singleModeState.active ? singleModeState : generalExamState;
     scoreEl.textContent = s.score.toFixed(2);
+    document.getElementById('correct-count').textContent = s.correct;
+    document.getElementById('incorrect-count').textContent = s.incorrect;
 }
 
 init();
