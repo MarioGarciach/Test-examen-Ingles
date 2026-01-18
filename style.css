@@ -485,7 +485,7 @@ footer p {
     margin-bottom: 30px;
 }
 
-.mode-grid {
+.modes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
@@ -582,39 +582,131 @@ footer p {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 20px 15px;
         border-radius: 0;
         min-height: 100vh;
         box-shadow: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Header adjustments */
+    header {
+        margin-bottom: 20px;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-top: 30px;
+        /* Space for settings btn */
     }
 
+    .subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    /* Stats bar compacting */
     .stats-bar {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .btn {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .navigation {
-        flex-direction: column-reverse;
         gap: 10px;
+        padding: 15px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    /* Navigation - Order: Exit (Top) -> Prev -> Next (Bottom/Main) */
+    .navigation {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
+        padding-top: 20px;
     }
 
     .navigation .btn {
         width: 100%;
         margin: 0;
+        padding: 15px;
+        font-size: 1.05rem;
     }
 
+    /* Make 'Next' button pop more on mobile */
+    #next-btn,
+    #submit-exam-btn {
+        order: 3;
+        /* Ensure it's last (bottom) */
+        padding: 18px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 10px rgba(99, 102, 241, 0.4);
+    }
+
+    #prev-btn {
+        order: 2;
+    }
+
+    #exit-btn {
+        order: 1;
+        border: none;
+        /* Less visual weight */
+        background: transparent;
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Results screen buttons */
     .action-buttons {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+        padding: 16px;
+    }
+}
+
+/* Small Screens (Phones < 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .stats-bar {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .stat-value {
+        font-size: 1.1rem;
+    }
+
+    .question-number {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .question-text {
+        font-size: 1.1rem;
+    }
+
+    .option {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+
+    /* Center mode cards on small screens */
+    .modes-grid {
+        grid-template-columns: 1fr;
     }
 }
 
