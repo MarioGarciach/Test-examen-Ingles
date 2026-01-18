@@ -990,6 +990,289 @@ const questionDatabase = [
         category: "Grammar",
         modes: ["future"],
         tip: "Will para predicciones lejanas o sin prueba visual."
+    },
+    // --- EXPANSION QUESTIONS (BATCH 2) ---
+
+    // General / Vocabulary
+    {
+        id: 34,
+        question: "Synonym of 'Fast':",
+        options: ["Quick", "Slow", "Steady", "Calm"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Quick y Fast son sinónimos."
+    },
+    {
+        id: 35,
+        question: "Office Item: What do you use to staple papers?",
+        options: ["Stapler", "Scissors", "Ruler", "Glue"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Stapler = Grapadora."
+    },
+    {
+        id: 36,
+        question: "Phrasal Verb: 'To call off' means...",
+        options: ["To cancel", "To telephone", "To visit", "To shout"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Call off = Cancelar (un evento/reunión)."
+    },
+    {
+        id: 37,
+        question: "Antonym of 'Professional':",
+        options: ["Amateur", "Expert", "Skilled", "Qualified"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Amateur = aficionado (no profesional)."
+    },
+    {
+        id: 38,
+        question: "Formal/Informal: 'Thanks a lot' is...",
+        options: ["Informal", "Formal", "Academic", "Legal"],
+        correct: 0,
+        category: "Communication",
+        modes: ["general"],
+        tip: "Para formalidad se usa 'Thank you very much'."
+    },
+
+    // Modals
+    {
+        id: 114,
+        question: "Possibility: It ______ be true, but I doubt it.",
+        options: ["might", "must", "can't", "should"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Might indica posibilidad remota."
+    },
+    {
+        id: 115,
+        question: "Advice (Negative): You ______ eat so much sugar.",
+        options: ["shouldn't", "mustn't", "don't have to", "can't"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Shouldn't = consejo negativo."
+    },
+    {
+        id: 116,
+        question: "Polite Request: ______ you pass the salt, please?",
+        options: ["Could", "Should", "Must", "Might"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Could you... = ¿Podrías...?"
+    },
+    {
+        id: 117,
+        question: "Necessity: I ______ go to the bank, I have no cash.",
+        options: ["have to", "should", "can", "may"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Have to = necesidad externa."
+    },
+    {
+        id: 118,
+        question: "Past Deduction: She's late. She ______ missed the bus.",
+        options: ["must have", "should have", "can have", "would have"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Must have + participio = deducción lógica pasada."
+    },
+
+    // Pronouns
+    {
+        id: 214,
+        question: "Reflexive: He cut ______ while cooking.",
+        options: ["himself", "his", "him", "he"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Himself = se cortó a sí mismo."
+    },
+    {
+        id: 215,
+        question: "Relative: The place ______ we met.",
+        options: ["where", "which", "who", "when"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Where para lugares."
+    },
+    {
+        id: 216,
+        question: "Object: Don't wait for ______.",
+        options: ["us", "we", "our", "ours"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Wait for US (pronombre objeto)."
+    },
+    {
+        id: 217,
+        question: "Possessive: Is this pen ______?",
+        options: ["yours", "your", "you", "my"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Yours va al final (pronombre)."
+    },
+    {
+        id: 218,
+        question: "Indefinite: There is ______ in the fridge.",
+        options: ["nothing", "anything", "any", "no"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "There is NOTHING (oración positiva con significado negativo)."
+    },
+
+    // Tenses
+    {
+        id: 314,
+        question: "Present Perfect: She ______ (just) arrived.",
+        options: ["has just", "just has", "did just", "is just"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "Has just arrived (acaba de llegar)."
+    },
+    {
+        id: 315,
+        question: "Past Continuous: They ______ playing chess at 8pm.",
+        options: ["were", "was", "are", "did"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "They WERE playing."
+    },
+    {
+        id: 316,
+        question: "Present Simple: He usually ______ coffee.",
+        options: ["drinks", "drink", "is drinking", "drank"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "Habitual -> Drinks (3ª persona)."
+    },
+    {
+        id: 317,
+        question: "Past Perfect: When I arrived, the movie ______ already started.",
+        options: ["had", "has", "was", "did"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "Had started (había empezado)."
+    },
+    {
+        id: 318,
+        question: "State Verbs: I ______ this music.",
+        options: ["love", "am loving", "was loving", "been loving"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "Love es un verbo de estado, no suele usarse en continuo."
+    },
+
+    // Mixed
+    {
+        id: 414,
+        question: "Gerund: I'm good at ______.",
+        options: ["drawing", "draw", "to draw", "drew"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Good AT + Ing."
+    },
+    {
+        id: 415,
+        question: "Infinitive: I want ______ travel.",
+        options: ["to", "for", "in", "at"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Want TO travel."
+    },
+    {
+        id: 416,
+        question: "Preposition: Depends ______ the weather.",
+        options: ["on", "of", "in", "from"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Depends ON."
+    },
+    {
+        id: 417,
+        question: "Article: She is ______ honest person.",
+        options: ["an", "a", "the", "-"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "AN honest (h muda)."
+    },
+    {
+        id: 418,
+        question: "Quantifier: I don't have ______ time.",
+        options: ["much", "many", "some", "a lot"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Much time (incontable, negativo)."
+    },
+
+    // Future
+    {
+        id: 514,
+        question: "Future Perfect: By 2030, I will ______ finished.",
+        options: ["have", "be", "had", "am"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Will have finished (habré terminado)."
+    },
+    {
+        id: 515,
+        question: "Prediction: I think you ______ like it.",
+        options: ["will", "are going to", "shall", "must"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "I think + Will (opinión)."
+    },
+    {
+        id: 516,
+        question: "Offer: ______ I get you a drink?",
+        options: ["Can", "Will", "Do", "Have"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Can I... (ofrecimiento informal)."
+    },
+    {
+        id: 517,
+        question: "Plan: We ______ to move next year.",
+        options: ["are going", "will", "go", "shall"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Are going TO move."
+    },
+    {
+        id: 518,
+        question: "Future Continuous: I will ______ working at 9.",
+        options: ["be", "have", "am", "do"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Will BE working."
     }
 ];
 
