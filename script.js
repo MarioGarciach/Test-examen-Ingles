@@ -4,7 +4,7 @@ const questionDatabase = [
     {
         id: 1,
         question: "¿Qué prefijo se debe usar para transformar 'HAPPY' en su antónimo?",
-        options: ["re-", "un-", "mis-", "dis-"],
+        options: [ "dis-", "un-", "mis-", "re-" ],
         correct: 1,
         category: "Vocabulary",
         modes: ["general", "mixed"],
@@ -14,12 +14,12 @@ const questionDatabase = [
         id: 2,
         question: "Identifica la oración que describe una acción que está ocurriendo AHORA MISMO:",
         options: [
-            "I am preparing the report right now.",
             "I prepare reports every Monday.",
+            "I am preparing the report right now.",
             "I prepared the report yesterday.",
             "I will prepare the report later."
         ],
-        correct: 0,
+        correct: 1,
         category: "Grammar",
         modes: ["general", "tenses"],
         tip: "Usa Present Continuous (am/is/are + ing) para acciones actuales."
@@ -28,12 +28,12 @@ const questionDatabase = [
         id: 3,
         question: "¿Cuál es el patrón verbal correcto tras el verbo 'ENJOY'?",
         options: [
-            "I enjoy attending training sessions.",
-            "I enjoy attend training sessions.",
+            "I enjoy for attending training sessions.",
             "I enjoy to attend training sessions.",
-            "I enjoy for attending training sessions."
+            "I enjoy attending training sessions.",
+            "I enjoy attend training sessions."
         ],
-        correct: 0,
+        correct: 2,
         category: "Grammar",
         modes: ["general", "mixed"],
         tip: "Verbos como 'enjoy', 'mind' y 'suggest' siempre van seguidos de gerundio (-ing)."
@@ -42,35 +42,35 @@ const questionDatabase = [
         id: 4,
         question: "¿Qué frase es adecuada para pedir una aclaración educadamente?",
         options: [
-            "Could you explain that differently?",
             "What do you mean?",
-            "Say it again.",
-            "I don't get it."
+            "Could you explain that differently?",
+            "I don't get it.",
+            "Say it again."
         ],
-        correct: 0,
+        correct: 1,
         category: "Professional Communication",
         modes: ["general"],
         tip: "En contextos profesionales, usa 'Could you...' para ser más cortés."
     },
     {
         id: 5,
-        question: "Completa: 'The team meeting is scheduled ______ Thursday.'",
-        options: ["on", "in", "at", "by"],
+        question: "'The team meeting is scheduled ______ Thursday.'",
+        options: [ "on", "at", "in", "by" ],
         correct: 0,
         category: "Grammar",
         modes: ["general", "mixed"],
-        tip: "ON days (on Monday), IN months/years (in July), AT time (at 5pm)."
+        tip: "Completa: ON days (on Monday), IN months/years (in July), AT time (at 5pm)."
     },
     {
         id: 6,
         question: "¿Qué oración es correcta (Present Perfect)?",
         options: [
+            "The team has finish the project.",
             "The team has finished the project.",
             "The team have finished the project yesterday.",
-            "The team has finish the project.",
             "The team finished the project yet."
         ],
-        correct: 0,
+        correct: 1,
         category: "Grammar",
         modes: ["general", "tenses"],
         tip: "Present Perfect (has finished) no usa marcadores de tiempo pasado específico como 'yesterday'."
@@ -78,8 +78,8 @@ const questionDatabase = [
     {
         id: 7,
         question: "¿Cómo se llama la estrategia de lectura para buscar datos específicos?",
-        options: ["Scanning", "Skimming", "Reading for detail", "Intensive reading"],
-        correct: 0,
+        options: [ "Intensive reading", "Scanning", "Skimming", "Reading for detail" ],
+        correct: 1,
         category: "Reading Skills",
         modes: ["general"],
         tip: "Scanning = buscar datos concretos. Skimming = idea general."
@@ -89,9 +89,9 @@ const questionDatabase = [
         question: "Selecciona el orden correcto:",
         options: [
             "She organizes her workspace at 9 a.m.",
-            "She at 9 a.m. organizes her workspace.",
+            "At 9 a.m. organizes she her workspace.",
             "Organizes she her workspace at 9 a.m.",
-            "At 9 a.m. organizes she her workspace."
+            "She at 9 a.m. organizes her workspace."
         ],
         correct: 0,
         category: "Grammar",
@@ -101,8 +101,8 @@ const questionDatabase = [
     {
         id: 9,
         question: "¿Qué documento registra un accidente laboral?",
-        options: ["Incident report", "Safety Memo", "Annual Review", "Invoice"],
-        correct: 0,
+        options: [ "Safety Memo", "Annual Review", "Incident report", "Invoice" ],
+        correct: 2,
         category: "Professional Vocabulary",
         modes: ["general"],
         tip: "Un 'Incident report' es el documento estándar para accidentes."
@@ -111,12 +111,12 @@ const questionDatabase = [
         id: 10,
         question: "Pasado Simple correcto con 'yesterday':",
         options: [
+            "I was sending the files yesterday.",
             "I sent the files yesterday.",
             "I have sent the files yesterday.",
-            "I was sending the files yesterday.",
             "I send the files yesterday."
         ],
-        correct: 0,
+        correct: 1,
         category: "Grammar",
         modes: ["general", "tenses"],
         tip: "Con 'yesterday', 'last week', usa Past Simple (sent), nunca Present Perfect."
@@ -139,12 +139,12 @@ const questionDatabase = [
         id: 12,
         question: "Forma más formal de ofrecer ayuda:",
         options: [
-            "Shall I assist you?",
-            "Can I help?",
             "Do you need help?",
-            "Must I help you?"
+            "Can I help?",
+            "Must I help you?",
+            "Shall I assist you?"
         ],
-        correct: 0,
+        correct: 3,
         category: "Professional Communication",
         modes: ["general", "modals"],
         tip: "'Shall' es muy formal y adecuado para ofrecer servicios profesionales."
@@ -152,25 +152,25 @@ const questionDatabase = [
     {
         id: 13,
         question: "This is the guide ______ explains the process.",
-        options: ["that", "who", "where", "whose"],
-        correct: 0,
+        options: [ "whose", "that", "where", "who" ],
+        correct: 1,
         category: "Grammar",
         modes: ["general", "mixed"],
         tip: "'That' o 'which' para cosas. 'Who' para personas."
     },
     {
         id: 14,
-        question: "Futuro planeado (intención): 'I ______ prepare the list.'",
-        options: ["am going to", "will", "going to", "prepare"],
+        question: "'I ______ prepare the list.'",
+        options: [ "am going to", "will", "going to", "prepare" ],
         correct: 0,
         category: "Grammar",
         modes: ["general", "future"],
-        tip: "Am going to = plan pre-decidido. Will = decisión espontánea."
+        tip: "Futuro planeado (intención): Am going to = plan pre-decidido. Will = decisión espontánea."
     },
     {
         id: 15,
         question: "'Submit a report' es un ejemplo de:",
-        options: ["Collocation", "Idiom", "Phrasal Verb", "Slang"],
+        options: [ "Collocation", "Idiom", "Phrasal Verb", "Slang" ],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -179,8 +179,8 @@ const questionDatabase = [
     {
         id: 16,
         question: "Lectura rápida para idea general (gist):",
-        options: ["Skimming", "Scanning", "Close reading", "Proofreading"],
-        correct: 0,
+        options: [ "Proofreading", "Close reading", "Skimming", "Scanning" ],
+        correct: 2,
         category: "Reading Skills",
         modes: ["general"],
         tip: "Skimming = 'cremar' o leer por encima para captar lo principal."
@@ -189,12 +189,12 @@ const questionDatabase = [
         id: 17,
         question: "Pasado simple regular negativo:",
         options: [
-            "The printer didn't fail.",
-            "The printer didn't failed.",
+            "The printer wasn't fail.",
             "The printer not failed.",
-            "The printer wasn't fail."
+            "The printer didn't failed.",
+            "The printer didn't fail."
         ],
-        correct: 0,
+        correct: 3,
         category: "Grammar",
         modes: ["general", "tenses"],
         tip: "En negativo (didn't), el verbo principal vuelve a infinitivo (fail, no failed)."
@@ -203,12 +203,12 @@ const questionDatabase = [
         id: 18,
         question: "Obligación fuerte/regla:",
         options: [
-            "You must wear a helmet.",
-            "You can wear a helmet.",
             "You should wear a helmet.",
+            "You can wear a helmet.",
+            "You must wear a helmet.",
             "You might wear a helmet."
         ],
-        correct: 0,
+        correct: 2,
         category: "Grammar",
         modes: ["general", "modals"],
         tip: "Must = obligación. Should = consejo."
@@ -216,7 +216,7 @@ const questionDatabase = [
     {
         id: 19,
         question: "Sinónimo de 'ASSIST':",
-        options: ["Help", "Attend", "Assert", "Assign"],
+        options: [ "Help", "Assign", "Attend", "Assert" ],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -226,12 +226,12 @@ const questionDatabase = [
         id: 20,
         question: "Primer Condicional Correcto:",
         options: [
-            "If it rains, I will stay home.",
-            "If it will rain, I stay home.",
             "If it rains, I stay home.",
+            "If it will rain, I stay home.",
+            "If it rains, I will stay home.",
             "If it rained, I would stay home."
         ],
-        correct: 0,
+        correct: 2,
         category: "Grammar",
         modes: ["general", "mixed"],
         tip: "If + Presente, Will + Futuro."
@@ -240,12 +240,12 @@ const questionDatabase = [
         id: 21,
         question: "Mejor forma de estudiar vocabulario:",
         options: [
-            "With context and examples",
-            "Just translations",
             "Memorizing lists",
-            "Reading dictionary definitions"
+            "Just translations",
+            "Reading dictionary definitions",
+            "With context and examples"
         ],
-        correct: 0,
+        correct: 3,
         category: "Vocabulary Skills",
         modes: ["general"],
         tip: "El contexto ayuda a retener mejor que las traducciones aisladas."
@@ -254,12 +254,12 @@ const questionDatabase = [
         id: 22,
         question: "¿Para qué sirve decir 'Let me see...'?",
         options: [
-            "To gain thinking time (hesitation)",
             "To end a conversation",
+            "To gain thinking time (hesitation)",
             "To ask for permission",
             "To interrupt someone"
         ],
-        correct: 0,
+        correct: 1,
         category: "Speaking Skills",
         modes: ["general"],
         tip: "Es un 'hesitation device' para pensar sin perder el turno."
@@ -268,12 +268,12 @@ const questionDatabase = [
         id: 23,
         question: "Cierre formal de email:",
         options: [
-            "I look forward to hearing from you.",
-            "I look forward to hear from you.",
             "I'm looking forward hear from you.",
-            "Look forward hearing from you."
+            "I look forward to hearing from you.",
+            "Look forward hearing from you.",
+            "I look forward to hear from you."
         ],
-        correct: 0,
+        correct: 1,
         category: "Professional Communication",
         modes: ["general"],
         tip: "To look forward TO + verbo-ING."
@@ -281,7 +281,7 @@ const questionDatabase = [
     {
         id: 24,
         question: "Despedida formal (conoces el nombre):",
-        options: ["Yours sincerely", "Yours faithfully", "Best regards", "Cheers"],
+        options: [ "Yours sincerely", "Cheers", "Best regards", "Yours faithfully" ],
         correct: 0,
         category: "Professional Communication",
         modes: ["general"],
@@ -290,8 +290,8 @@ const questionDatabase = [
     {
         id: 25,
         question: "Elemento clave en el asunto de un email:",
-        options: ["Clear summary of content", "Urgent flag always", "Sender's nickname", "Blank space"],
-        correct: 0,
+        options: [ "Urgent flag always", "Blank space", "Clear summary of content", "Sender's nickname" ],
+        correct: 2,
         category: "Professional Communication",
         modes: ["general"],
         tip: "Debe resumir claramente el propósito del email."
@@ -300,12 +300,12 @@ const questionDatabase = [
         id: 26,
         question: "Pregunta de entrevista sobre uno mismo:",
         options: [
-            "What are your strengths?",
+            "What politics do you like?",
             "What is your house like?",
-            "Do you have a car?",
-            "What politics do you like?"
+            "What are your strengths?",
+            "Do you have a car?"
         ],
-        correct: 0,
+        correct: 2,
         category: "Professional Vocabulary",
         modes: ["general"],
         tip: "Strengths (fortalezas) es estándar."
@@ -314,12 +314,12 @@ const questionDatabase = [
         id: 27,
         question: "Rutina diaria:",
         options: [
-            "I check emails every morning.",
-            "I am checking emails every morning.",
             "I check emails yesterday.",
-            "I will check emails every morning."
+            "I will check emails every morning.",
+            "I am checking emails every morning.",
+            "I check emails every morning."
         ],
-        correct: 0,
+        correct: 3,
         category: "Grammar",
         modes: ["general", "tenses"],
         tip: "Routine = Present Simple (check)."
@@ -327,8 +327,8 @@ const questionDatabase = [
     {
         id: 28,
         question: "Pronombre relativo para personas:",
-        options: ["The client who called...", "The client which called...", "The client where called...", "The client whose called..."],
-        correct: 0,
+        options: [ "The client which called...", "The client where called...", "The client whose called...", "The client who called..." ],
+        correct: 3,
         category: "Grammar",
         modes: ["general", "pronouns"],
         tip: "Who para personas, Which para cosas."
@@ -336,8 +336,8 @@ const questionDatabase = [
     {
         id: 29,
         question: "Colocación verbal correcta con 'REPORT':",
-        options: ["Submit a report", "Do a report", "Say a report", "Tell a report"],
-        correct: 0,
+        options: [ "Do a report", "Submit a report", "Say a report", "Tell a report" ],
+        correct: 1,
         category: "Collocations",
         modes: ["general"],
         tip: "Submit (entregar/enviar) o Write son correctos."
@@ -346,12 +346,12 @@ const questionDatabase = [
         id: 30,
         question: "¿Qué es un 'Briefing'?",
         options: [
-            "A short informational meeting",
-            "A long holiday",
+            "A formal dinner",
             "A type of bag",
-            "A formal dinner"
+            "A short informational meeting",
+            "A long holiday"
         ],
-        correct: 0,
+        correct: 2,
         category: "Professional Vocabulary",
         modes: ["general"],
         tip: "Briefing = reunión breve informativa o de instrucciones."
@@ -360,100 +360,100 @@ const questionDatabase = [
     // --- MODALS TEST (Refined) ---
     {
         id: 101,
-        question: "Regla obligatoria: You ______ wear safety gear.",
-        options: ["must", "should", "might", "can"],
-        correct: 0,
+        question: "You ______ wear safety gear.",
+        options: [ "might", "must", "can", "should" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Must para normas obligatorias. Should es consejo."
+        tip: "Regla obligatoria: Must para normas obligatorias. Should es consejo."
     },
     {
         id: 102,
-        question: "Ausencia de obligación: You ______ finish it today if you're busy.",
-        options: ["don't have to", "mustn't", "can't", "shouldn't"],
+        question: "You ______ finish it today if you're busy.",
+        options: [ "don't have to", "shouldn't", "can't", "mustn't" ],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Don't have to = no es necesario. Mustn't = prohibido."
+        tip: "Ausencia de obligación: Don't have to = no es necesario. Mustn't = prohibido."
     },
     {
         id: 103,
-        question: "Petición muy formal: ______ I use your computer?",
-        options: ["May", "Must", "Should", "Will"],
-        correct: 0,
+        question: "______ I use your computer?",
+        options: [ "Should", "Will", "May", "Must" ],
+        correct: 2,
         category: "Grammar",
         modes: ["modals"],
-        tip: "May es el más formal para pedir permiso."
+        tip: "Petición muy formal: May es el más formal para pedir permiso."
     },
     {
         id: 104,
-        question: "Prohibición: You ______ smoke here.",
-        options: ["mustn't", "don't have to", "needn't", "wouldn't"],
+        question: "You ______ smoke here.",
+        options: [ "mustn't", "wouldn't", "don't have to", "needn't" ],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Mustn't indica que está prohibido."
+        tip: "Prohibición: Mustn't indica que está prohibido."
     },
     {
         id: 105,
-        question: "Habilidad general: He ______ speak Arabic fluently.",
-        options: ["can", "may", "must", "shall"],
-        correct: 0,
+        question: "He ______ speak Arabic fluently.",
+        options: [ "may", "must", "can", "shall" ],
+        correct: 2,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Can = habilidad (saber hacer algo)."
+        tip: "Habilidad general: Can = habilidad (saber hacer algo)."
     },
     {
         id: 106,
-        question: "Consejo fuerte: You ______ see a doctor.",
-        options: ["should", "can", "may", "might"],
-        correct: 0,
+        question: "You ______ see a doctor.",
+        options: [ "may", "can", "might", "should" ],
+        correct: 3,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Should = recomendación."
+        tip: "Consejo fuerte: Should = recomendación."
     },
     {
         id: 107,
-        question: "Deducción lógica (seguro que sí): He ______ be tired after the marathon.",
-        options: ["must", "can", "should", "need"],
-        correct: 0,
+        question: "He ______ be tired after the marathon.",
+        options: [ "should", "can", "need", "must" ],
+        correct: 3,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Must be = estoy seguro de que lo está."
+        tip: "Deducción lógica (seguro que sí): Must be = estoy seguro de que lo está."
     },
     {
         id: 108,
-        question: "Petición cortés: ______ you open the window?",
-        options: ["Could", "May", "Should", "Must"],
-        correct: 0,
+        question: "______ you open the window?",
+        options: [ "May", "Could", "Must", "Should" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Could you = podrías (petición)."
+        tip: "Petición cortés: Could you = podrías (petición)."
     },
     {
         id: 109,
-        question: "Posibilidad (quizás): It ______ rain later.",
-        options: ["might", "must", "has to", "should"],
+        question: "It ______ rain later.",
+        options: [ "might", "has to", "must", "should" ],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Might/May = probabilidad incierta."
+        tip: "Posibilidad (quizás): Might/May = probabilidad incierta."
     },
     {
         id: 110,
-        question: "Habilidad pasada: I ______ run fast when I was young.",
-        options: ["could", "can", "should", "may"],
-        correct: 0,
+        question: "I ______ run fast when I was young.",
+        options: [ "should", "could", "may", "can" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Could = pasado de Can."
+        tip: "Habilidad pasada: Could = pasado de Can."
     },
 
     // --- PRONOUNS TEST (Refined) ---
     {
         id: 201,
-        question: "Posesión: That's the man ______ car was stolen.",
-        options: ["whose", "who", "which", "that"],
+        question: "That's the man ______ car was stolen.",
+        options: [ "whose", "who", "that", "which" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -461,360 +461,360 @@ const questionDatabase = [
     },
     {
         id: 202,
-        question: "Objeto: The book ______ I read is good.",
-        options: ["which", "who", "whose", "where"],
+        question: "The book ______ I read is good.",
+        options: [ "which", "who", "where", "whose" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Which para libros/cosas."
+        tip: "Objeto: Which para libros/cosas."
     },
     {
         id: 203,
-        question: "Reflexivo: She hurt ______.",
-        options: ["herself", "her", "she", "hers"],
-        correct: 0,
+        question: "She hurt ______.",
+        options: [ "her", "herself", "she", "hers" ],
+        correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Herself = a ella misma."
+        tip: "Reflexivo: Herself = a ella misma."
     },
     {
         id: 204,
-        question: "¿De quién?: ______ phone is this?",
-        options: ["Whose", "Who's", "Who", "Which"],
-        correct: 0,
+        question: "______ phone is this?",
+        options: [ "Which", "Who's", "Who", "Whose" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Whose = de quién. Who's = quién es."
+        tip: "¿De quién?: Whose = de quién. Who's = quién es."
     },
     {
         id: 205,
-        question: "En énfasis: I did it ______.",
-        options: ["myself", "me", "mine", "my"],
-        correct: 0,
+        question: "I did it ______.",
+        options: [ "mine", "me", "my", "myself" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Myself = yo mismo (sin ayuda)."
+        tip: "En énfasis: Myself = yo mismo (sin ayuda)."
     },
     {
         id: 206,
-        question: "Lugar: The city ______ I live.",
-        options: ["where", "which", "that", "when"],
-        correct: 0,
+        question: "The city ______ I live.",
+        options: [ "which", "that", "when", "where" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Where para ubicaciones."
+        tip: "Lugar: Where para ubicaciones."
     },
     {
         id: 207,
-        question: "Recíproco: They love ______.",
-        options: ["each other", "themselves", "they", "theirs"],
-        correct: 0,
+        question: "They love ______.",
+        options: [ "theirs", "each other", "themselves", "they" ],
+        correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Each other = el uno al otro."
+        tip: "Recíproco: Each other = el uno al otro."
     },
     {
         id: 208,
-        question: "Pronombre Posesivo: This is mine, not ______.",
-        options: ["yours", "your", "you", "yourself"],
-        correct: 0,
+        question: "This is mine, not ______.",
+        options: [ "yourself", "your", "yours", "you" ],
+        correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Yours = tuyo (sustantivo)."
+        tip: "Pronombre Posesivo: Yours = tuyo (sustantivo)."
     },
     {
         id: 209,
-        question: "Indefinido negativo: I didn't see ______.",
-        options: ["anybody", "nobody", "somebody", "no one"],
+        question: "I didn't see ______.",
+        options: [ "anybody", "no one", "nobody", "somebody" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Didn't ya es negativo -> usa Anybody. (I saw nobody)."
+        tip: "Indefinido negativo: Didn't ya es negativo -> usa Anybody. (I saw nobody)."
     },
     {
         id: 210,
-        question: "Objeto indirecto: Give it to ______.",
-        options: ["me", "I", "my", "mine"],
-        correct: 0,
+        question: "Give it to ______.",
+        options: [ "I", "mine", "me", "my" ],
+        correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Give X to ME (pronombre objeto)."
+        tip: "Objeto indirecto: Give X to ME (pronombre objeto)."
     },
 
     // --- TENSES TEST (Refined) ---
     {
         id: 301,
-        question: "Acción en progreso: Listen! Someone ______ the guitar.",
-        options: ["is playing", "plays", "played", "has played"],
-        correct: 0,
+        question: "Listen! Someone ______ the guitar.",
+        options: [ "plays", "played", "has played", "is playing" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Al decir 'Listen!', implica ahora mismo -> Present Continuous."
+        tip: "Acción en progreso: Al decir 'Listen!', implica ahora mismo -> Present Continuous."
     },
     {
         id: 302,
-        question: "Experiencia indefinida: I ______ to Tokyo twice.",
-        options: ["have been", "went", "am going", "go"],
-        correct: 0,
+        question: "I ______ to Tokyo twice.",
+        options: [ "go", "went", "have been", "am going" ],
+        correct: 2,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Sin fecha específica = Present Perfect."
+        tip: "Experiencia indefinida: Sin fecha específica = Present Perfect."
     },
     {
         id: 303,
-        question: "Duración hasta ahora: She ______ here for 10 years.",
-        options: ["has worked", "works", "is working", "worked"],
-        correct: 0,
+        question: "She ______ here for 10 years.",
+        options: [ "worked", "is working", "works", "has worked" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "For 10 years + sigue allí = Present Perfect."
+        tip: "Duración hasta ahora: For 10 years + sigue allí = Present Perfect."
     },
     {
         id: 304,
-        question: "Interrupción en pasado: I ______ when the phone rang.",
-        options: ["was sleeping", "slept", "have slept", "sleep"],
-        correct: 0,
+        question: "I ______ when the phone rang.",
+        options: [ "slept", "was sleeping", "sleep", "have slept" ],
+        correct: 1,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Acción larga (Past Cont) interrumpida por corta."
+        tip: "Interrupción en pasado: Acción larga (Past Cont) interrumpida por corta."
     },
     {
         id: 305,
-        question: "Pasado del pasado: By the time I arrived, he ______.",
-        options: ["had left", "left", "has left", "leaves"],
+        question: "By the time I arrived, he ______.",
+        options: [ "had left", "left", "leaves", "has left" ],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Past Perfect para acción anterior a otra pasada."
+        tip: "Pasado del pasado: Past Perfect para acción anterior a otra pasada."
     },
     {
         id: 306,
-        question: "Momento específico pasado: We ______ pizza last night.",
-        options: ["ate", "have eaten", "eat", "were eating"],
+        question: "We ______ pizza last night.",
+        options: [ "ate", "have eaten", "were eating", "eat" ],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Last night = Past Simple."
+        tip: "Momento específico pasado: Last night = Past Simple."
     },
     {
         id: 307,
-        question: "Verdad universal: The sun ______ in the east.",
-        options: ["rises", "is rising", "rose", "has risen"],
-        correct: 0,
+        question: "The sun ______ in the east.",
+        options: [ "has risen", "is rising", "rose", "rises" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Hechos científicos = Present Simple."
+        tip: "Verdad universal: Hechos científicos = Present Simple."
     },
     {
         id: 308,
-        question: "Pregunta pasada: What ______ yesterday?",
-        options: ["did you do", "have you done", "do you do", "were you doing"],
-        correct: 0,
+        question: "What ______ yesterday?",
+        options: [ "do you do", "have you done", "were you doing", "did you do" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Did you do es la forma estándar para preguntar por ayer."
+        tip: "Pregunta pasada: Did you do es la forma estándar para preguntar por ayer."
     },
     {
         id: 309,
-        question: "Acción reciente con efecto: I ______ my keys! I can't enter.",
-        options: ["have lost", "lost", "lose", "am losing"],
-        correct: 0,
+        question: "I ______ my keys! I can't enter.",
+        options: [ "lose", "am losing", "have lost", "lost" ],
+        correct: 2,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Perdí las llaves y AHORA no puedo entrar = Present Perfect."
+        tip: "Acción reciente con efecto: Perdí las llaves y AHORA no puedo entrar = Present Perfect."
     },
     {
         id: 310,
-        question: "Futuro en pasado: I thought you ______ come.",
-        options: ["would", "will", "can", "may"],
-        correct: 0,
+        question: "I thought you ______ come.",
+        options: [ "will", "would", "can", "may" ],
+        correct: 1,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Would es el pasado de will."
+        tip: "Futuro en pasado: Would es el pasado de will."
     },
 
     // --- MIXED GRAMMAR (Refined) ---
     {
         id: 401,
-        question: "Tiempo específico: I haven't seen him ______ 2020.",
-        options: ["since", "for", "ago", "from"],
-        correct: 0,
+        question: "I haven't seen him ______ 2020.",
+        options: [ "ago", "for", "from", "since" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Since + fecha/punto de partida."
+        tip: "Tiempo específico: Since + fecha/punto de partida."
     },
     {
         id: 402,
-        question: "Periodo de tiempo: We have waited ______ 2 hours.",
-        options: ["for", "since", "during", "ago"],
-        correct: 0,
+        question: "We have waited ______ 2 hours.",
+        options: [ "since", "ago", "during", "for" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "For + duración."
+        tip: "Periodo de tiempo: For + duración."
     },
     {
         id: 403,
-        question: "Pasiva Pasada: The novel ______ by Cervantes.",
-        options: ["was written", "wrote", "has written", "writes"],
-        correct: 0,
+        question: "The novel ______ by Cervantes.",
+        options: [ "has written", "wrote", "was written", "writes" ],
+        correct: 2,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Was/Were + Participio."
+        tip: "Pasiva Pasada: Was/Were + Participio."
     },
     {
         id: 404,
-        question: "Pasiva Presente: English ______ spoken here.",
-        options: ["is", "are", "has", "was"],
+        question: "English ______ spoken here.",
+        options: [ "is", "are", "has", "was" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "English is spoken (Present Passive)."
+        tip: "Pasiva Presente: English is spoken (Present Passive)."
     },
     {
         id: 405,
-        question: "Condicional 1: If you study, you ______ pass.",
-        options: ["will", "would", "did", "can't"],
+        question: "If you study, you ______ pass.",
+        options: [ "will", "can't", "would", "did" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Real possibility: Will."
+        tip: "Condicional 1: Real possibility: Will."
     },
     {
         id: 406,
-        question: "Condicional 2: If I were rich, I ______ buy a boat.",
-        options: ["would", "will", "can", "shall"],
-        correct: 0,
+        question: "If I were rich, I ______ buy a boat.",
+        options: [ "can", "will", "shall", "would" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Hypothetical: Would."
+        tip: "Condicional 2: Hypothetical: Would."
     },
     {
         id: 407,
-        question: "Conector Contraste: ______, it was cold.",
-        options: ["However", "Although", "But", "Despite"],
+        question: "______, it was cold.",
+        options: [ "However", "Despite", "But", "Although" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "However va seguido de coma al inicio."
+        tip: "Conector Contraste: However va seguido de coma al inicio."
     },
     {
         id: 408,
-        question: "Conector Causa: I stayed home ______ I was sick.",
-        options: ["because", "so", "but", "although"],
+        question: "I stayed home ______ I was sick.",
+        options: [ "because", "although", "so", "but" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Because explica la razón."
+        tip: "Conector Causa: Because explica la razón."
     },
     {
         id: 409,
-        question: "Make vs Do: I need to ______ a mistake.",
-        options: ["make", "do", "have", "create"],
-        correct: 0,
+        question: "I need to ______ a mistake.",
+        options: [ "have", "create", "do", "make" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Make a mistake (collocation)."
+        tip: "Make vs Do: Make a mistake (collocation)."
     },
     {
         id: 410,
-        question: "A menos que: I won't go ______ you go.",
-        options: ["unless", "if", "when", "as"],
-        correct: 0,
+        question: "I won't go ______ you go.",
+        options: [ "if", "when", "as", "unless" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Unless = if not."
+        tip: "A menos que: Unless = if not."
     },
 
     // --- FUTURE FORMS (Refined) ---
     {
         id: 501,
-        question: "Evidencia presente: Look at the clouds! It ______ rain.",
-        options: ["is going to", "will", "is raining", "rains"],
+        question: "Look at the clouds! It ______ rain.",
+        options: [ "is going to", "will", "is raining", "rains" ],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
-        tip: "Going to para predicción con evidencia visual."
+        tip: "Evidencia presente: Going to para predicción con evidencia visual."
     },
     {
         id: 502,
-        question: "Predicción general: Robots ______ take over the world.",
-        options: ["will", "are going to", "are taking", "take"],
-        correct: 0,
+        question: "Robots ______ take over the world.",
+        options: [ "take", "are going to", "are taking", "will" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future"],
-        tip: "Will para opiniones o predicciones futuras generales."
+        tip: "Predicción general: Will para opiniones o predicciones futuras generales."
     },
     {
         id: 503,
-        question: "Plan agendado: I ______ the dentist tomorrow at 10.",
-        options: ["am seeing", "will see", "see", "saw"],
-        correct: 0,
+        question: "I ______ the dentist tomorrow at 10.",
+        options: [ "see", "am seeing", "saw", "will see" ],
+        correct: 1,
         category: "Grammar",
         modes: ["future"],
-        tip: "Present Continuous para citas fijas y planes confirmados."
+        tip: "Plan agendado: Present Continuous para citas fijas y planes confirmados."
     },
     {
         id: 504,
-        question: "Decisión espontánea: The phone is ringing. I ______ answer it.",
-        options: ["will", "am going to", "am answering", "answer"],
-        correct: 0,
+        question: "The phone is ringing. I ______ answer it.",
+        options: [ "am answering", "am going to", "will", "answer" ],
+        correct: 2,
         category: "Grammar",
         modes: ["future"],
-        tip: "Decision al momento = Will."
+        tip: "Decisión espontánea: Decision al momento = Will."
     },
     {
         id: 505,
-        question: "Time Clause: I will call you when I ______.",
-        options: ["arrive", "will arrive", "arrived", "am arriving"],
+        question: "I will call you when I ______.",
+        options: [ "arrive", "am arriving", "will arrive", "arrived" ],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
-        tip: "Despues de When/As soon as, usa Presente, no Futuro."
+        tip: "Time Clause: Despues de When/As soon as, usa Presente, no Futuro."
     },
     {
         id: 506,
-        question: "Futuro Continuo: This time tomorrow, I ______ flying to Paris.",
-        options: ["will be", "will", "am", "was"],
-        correct: 0,
+        question: "This time tomorrow, I ______ flying to Paris.",
+        options: [ "am", "will", "was", "will be" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future"],
-        tip: "Will be + -ing."
+        tip: "Futuro Continuo: Will be + -ing."
     },
     {
         id: 507,
-        question: "Intención: I ______ buy a new car soon.",
-        options: ["am going to", "will", "buy", "buying"],
+        question: "I ______ buy a new car soon.",
+        options: [ "am going to", "buying", "buy", "will" ],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
-        tip: "Going to para planes/intenciones generales."
+        tip: "Intención: Going to para planes/intenciones generales."
     },
     {
         id: 508,
-        question: "Horario (Timetable): The train ______ at 6 PM.",
-        options: ["leaves", "will leave", "is leaving", "has left"],
-        correct: 0,
+        question: "The train ______ at 6 PM.",
+        options: [ "has left", "leaves", "will leave", "is leaving" ],
+        correct: 1,
         category: "Grammar",
         modes: ["future"],
-        tip: "Horarios oficiales = Present Simple."
+        tip: "Horario (Timetable): Horarios oficiales = Present Simple."
     },
     {
         id: 509,
-        question: "Promesa: I promise I ______ tell anyone.",
-        options: ["won't", "don't", "not going to", "am not"],
-        correct: 0,
+        question: "I promise I ______ tell anyone.",
+        options: [ "not going to", "am not", "don't", "won't" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future"],
-        tip: "Promises = Will / Won't."
+        tip: "Promesa: Promises = Will / Won't."
     },
     {
         id: 510,
-        question: "Oferta: ______ I carry your bag?",
-        options: ["Shall", "Will", "Do", "Must"],
-        correct: 0,
+        question: "______ I carry your bag?",
+        options: [ "Must", "Will", "Do", "Shall" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future"],
-        tip: "Shall I...? para ofrecerse."
+        tip: "Oferta: Shall I...? para ofrecerse."
     },
 
     // --- NEW EXPANSION QUESTIONS ---
@@ -822,8 +822,8 @@ const questionDatabase = [
     {
         id: 31,
         question: "Professional 'Greeting' in email:",
-        options: ["Dear Mr. Smith,", "Hi Smith,", "Smith,", "Hey!"],
-        correct: 0,
+        options: [ "Smith,", "Dear Mr. Smith,", "Hi Smith,", "Hey!" ],
+        correct: 1,
         category: "Professional Communication",
         modes: ["general"],
         tip: "Dear + Apellido es el estándar formal."
@@ -831,8 +831,8 @@ const questionDatabase = [
     {
         id: 32,
         question: "Meaning of 'Deadline':",
-        options: ["The final date to complete a task", "A dead telephone line", "A meeting point", "The start of a project"],
-        correct: 0,
+        options: [ "The start of a project", "A meeting point", "A dead telephone line", "The final date to complete a task" ],
+        correct: 3,
         category: "Vocabulary",
         modes: ["general"],
         tip: "Deadline = fecha límite."
@@ -840,7 +840,7 @@ const questionDatabase = [
     {
         id: 33,
         question: "Opposite of 'Increase':",
-        options: ["Decrease", "Incline", "Raise", "Expand"],
+        options: [ "Decrease", "Raise", "Expand", "Incline" ],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -850,146 +850,146 @@ const questionDatabase = [
     // Modals Expansion
     {
         id: 111,
-        question: "Logical Assumption: The lights are off. They ______ be home.",
-        options: ["can't", "mustn't", "shouldn't", "needn't"],
-        correct: 0,
+        question: "The lights are off. They ______ be home.",
+        options: [ "needn't", "can't", "shouldn't", "mustn't" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals", "general"],
-        tip: "Can't be = deducción lógica negativa (seguro que no)."
+        tip: "Logical Assumption: Can't be = deducción lógica negativa (seguro que no)."
     },
     {
         id: 112,
-        question: "Past Ability: I ______ swim when I was 5.",
-        options: ["could", "can", "should", "must"],
-        correct: 0,
+        question: "I ______ swim when I was 5.",
+        options: [ "should", "can", "must", "could" ],
+        correct: 3,
         category: "Grammar",
         modes: ["modals", "general"],
-        tip: "Could es el pasado de Can."
+        tip: "Past Ability: Could es el pasado de Can."
     },
     {
         id: 113,
-        question: "Advice: You ______ look tired. Go to sleep.",
-        options: ["should", "must", "can", "have to"],
-        correct: 0,
+        question: "You ______ look tired. Go to sleep.",
+        options: [ "must", "have to", "can", "should" ],
+        correct: 3,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Should se usa para consejos personales."
+        tip: "Advice: Should se usa para consejos personales."
     },
 
     // Pronouns Expansion
     {
         id: 211,
-        question: "Object Pronoun: She called ______ yesterday.",
-        options: ["him", "he", "his", "himself"],
+        question: "She called ______ yesterday.",
+        options: [ "him", "himself", "his", "he" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns", "general"],
-        tip: "Him es el pronombre objeto (recibe la acción)."
+        tip: "Object Pronoun: Him es el pronombre objeto (recibe la acción)."
     },
     {
         id: 212,
-        question: "Reflexive Emphasis: The CEO ______ announced the news.",
-        options: ["himself", "his", "him", "he"],
-        correct: 0,
+        question: "The CEO ______ announced the news.",
+        options: [ "his", "he", "him", "himself" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Himself enfatiza que fue él persona (el mismo)."
+        tip: "Reflexive Emphasis: Himself enfatiza que fue él persona (el mismo)."
     },
     {
         id: 213,
-        question: "Demonstrative: ______ are my files over there.",
-        options: ["Those", "These", "That", "This"],
-        correct: 0,
+        question: "______ are my files over there.",
+        options: [ "These", "That", "Those", "This" ],
+        correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Those = plural y lejos."
+        tip: "Demonstrative: Those = plural y lejos."
     },
 
     // Tenses Expansion
     {
         id: 311,
-        question: "Past Continuous: While I ______ working, the power went out.",
-        options: ["was", "am", "were", "had"],
-        correct: 0,
+        question: "While I ______ working, the power went out.",
+        options: [ "were", "was", "had", "am" ],
+        correct: 1,
         category: "Grammar",
         modes: ["tenses", "general"],
-        tip: "Was working -> acción en progreso en pasado."
+        tip: "Past Continuous: Was working -> acción en progreso en pasado."
     },
     {
         id: 312,
-        question: "Present Perfect vs Past: I ______ him since 2010.",
-        options: ["have known", "know", "knew", "am knowing"],
-        correct: 0,
+        question: "I ______ him since 2010.",
+        options: [ "am knowing", "know", "knew", "have known" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Since + fecha requiere Present Perfect (have known)."
+        tip: "Present Perfect vs Past: Since + fecha requiere Present Perfect (have known)."
     },
     {
         id: 313,
-        question: "Future Fact: He ______ be 30 next month.",
-        options: ["will", "is going to", "is", "shall"],
-        correct: 0,
+        question: "He ______ be 30 next month.",
+        options: [ "is", "shall", "is going to", "will" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses", "future"],
-        tip: "Will para hechos futuros inevitables (edad)."
+        tip: "Future Fact: Will para hechos futuros inevitables (edad)."
     },
 
     // Mixed Expansion
     {
         id: 411,
-        question: "Tag Question: You are coming, ______?",
-        options: ["aren't you", "don't you", "won't you", "isn't it"],
-        correct: 0,
+        question: "You are coming, ______?",
+        options: [ "won't you", "isn't it", "don't you", "aren't you" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed", "general"],
-        tip: "Si la oración es positiva (+), el tag es negativo (-)."
+        tip: "Tag Question: Si la oración es positiva (+), el tag es negativo (-)."
     },
     {
         id: 412,
-        question: "Preposition: I'm interested ______ learning more.",
-        options: ["in", "on", "at", "about"],
-        correct: 0,
+        question: "I'm interested ______ learning more.",
+        options: [ "at", "on", "in", "about" ],
+        correct: 2,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Interested IN algo."
+        tip: "Preposition: Interested IN algo."
     },
     {
         id: 413,
-        question: "Comparative: This report is ______ than the last one.",
-        options: ["better", "gooder", "more good", "best"],
+        question: "This report is ______ than the last one.",
+        options: [ "better", "more good", "best", "gooder" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Better es el comparativo irregular de Good."
+        tip: "Comparative: Better es el comparativo irregular de Good."
     },
 
     // Future Forms Expansion
     {
         id: 511,
-        question: "Schedule: The meeting ______ at 9:00 AM.",
-        options: ["starts", "will start", "is starting", "start"],
-        correct: 0,
+        question: "The meeting ______ at 9:00 AM.",
+        options: [ "will start", "start", "is starting", "starts" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future", "general"],
-        tip: "Presente Simple para horarios fijos/programados."
+        tip: "Schedule: Presente Simple para horarios fijos/programados."
     },
     {
         id: 512,
-        question: "Arrangement: I ______ lunch with the client tomorrow.",
-        options: ["am having", "will have", "have", "had"],
-        correct: 0,
+        question: "I ______ lunch with the client tomorrow.",
+        options: [ "will have", "am having", "had", "have" ],
+        correct: 1,
         category: "Grammar",
         modes: ["future"],
-        tip: "Present Continuous para planes sociales confirmados."
+        tip: "Arrangement: Present Continuous para planes sociales confirmados."
     },
     {
         id: 513,
-        question: "Prediction (No evidence): In 2050, cars ______ fly.",
-        options: ["will", "are going to", "must", "can"],
-        correct: 0,
+        question: "In 2050, cars ______ fly.",
+        options: [ "are going to", "can", "will", "must" ],
+        correct: 2,
         category: "Grammar",
         modes: ["future"],
-        tip: "Will para predicciones lejanas o sin prueba visual."
+        tip: "Prediction (No evidence): Will para predicciones lejanas o sin prueba visual."
     },
     // --- EXPANSION QUESTIONS (BATCH 2) ---
 
@@ -997,7 +997,7 @@ const questionDatabase = [
     {
         id: 34,
         question: "Synonym of 'Fast':",
-        options: ["Quick", "Slow", "Steady", "Calm"],
+        options: [ "Quick", "Calm", "Slow", "Steady" ],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -1005,274 +1005,274 @@ const questionDatabase = [
     },
     {
         id: 35,
-        question: "Office Item: What do you use to staple papers?",
-        options: ["Stapler", "Scissors", "Ruler", "Glue"],
-        correct: 0,
+        question: "What do you use to staple papers?",
+        options: [ "Glue", "Scissors", "Ruler", "Stapler" ],
+        correct: 3,
         category: "Vocabulary",
         modes: ["general"],
-        tip: "Stapler = Grapadora."
+        tip: "Office Item: Stapler = Grapadora."
     },
     {
         id: 36,
-        question: "Phrasal Verb: 'To call off' means...",
-        options: ["To cancel", "To telephone", "To visit", "To shout"],
-        correct: 0,
+        question: "'To call off' means...",
+        options: [ "To shout", "To telephone", "To visit", "To cancel" ],
+        correct: 3,
         category: "Vocabulary",
         modes: ["general"],
-        tip: "Call off = Cancelar (un evento/reunión)."
+        tip: "Phrasal Verb: Call off = Cancelar (un evento/reunión)."
     },
     {
         id: 37,
         question: "Antonym of 'Professional':",
-        options: ["Amateur", "Expert", "Skilled", "Qualified"],
-        correct: 0,
+        options: [ "Qualified", "Skilled", "Expert", "Amateur" ],
+        correct: 3,
         category: "Vocabulary",
         modes: ["general"],
         tip: "Amateur = aficionado (no profesional)."
     },
     {
         id: 38,
-        question: "Formal/Informal: 'Thanks a lot' is...",
-        options: ["Informal", "Formal", "Academic", "Legal"],
-        correct: 0,
+        question: "'Thanks a lot' is...",
+        options: [ "Legal", "Formal", "Academic", "Informal" ],
+        correct: 3,
         category: "Communication",
         modes: ["general"],
-        tip: "Para formalidad se usa 'Thank you very much'."
+        tip: "Formal/Informal: Para formalidad se usa 'Thank you very much'."
     },
 
     // Modals
     {
         id: 114,
-        question: "Possibility: It ______ be true, but I doubt it.",
-        options: ["might", "must", "can't", "should"],
-        correct: 0,
+        question: "It ______ be true, but I doubt it.",
+        options: [ "can't", "should", "might", "must" ],
+        correct: 2,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Might indica posibilidad remota."
+        tip: "Possibility: Might indica posibilidad remota."
     },
     {
         id: 115,
-        question: "Advice (Negative): You ______ eat so much sugar.",
-        options: ["shouldn't", "mustn't", "don't have to", "can't"],
-        correct: 0,
+        question: "You ______ eat so much sugar.",
+        options: [ "mustn't", "can't", "don't have to", "shouldn't" ],
+        correct: 3,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Shouldn't = consejo negativo."
+        tip: "Advice (Negative): Shouldn't = consejo negativo."
     },
     {
         id: 116,
-        question: "Polite Request: ______ you pass the salt, please?",
-        options: ["Could", "Should", "Must", "Might"],
-        correct: 0,
+        question: "______ you pass the salt, please?",
+        options: [ "Might", "Could", "Should", "Must" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Could you... = ¿Podrías...?"
+        tip: "Polite Request: Could you... = ¿Podrías...?"
     },
     {
         id: 117,
-        question: "Necessity: I ______ go to the bank, I have no cash.",
-        options: ["have to", "should", "can", "may"],
-        correct: 0,
+        question: "I ______ go to the bank, I have no cash.",
+        options: [ "may", "have to", "can", "should" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Have to = necesidad externa."
+        tip: "Necessity: Have to = necesidad externa."
     },
     {
         id: 118,
-        question: "Past Deduction: She's late. She ______ missed the bus.",
-        options: ["must have", "should have", "can have", "would have"],
-        correct: 0,
+        question: "She's late. She ______ missed the bus.",
+        options: [ "can have", "must have", "would have", "should have" ],
+        correct: 1,
         category: "Grammar",
         modes: ["modals"],
-        tip: "Must have + participio = deducción lógica pasada."
+        tip: "Past Deduction: Must have + participio = deducción lógica pasada."
     },
 
     // Pronouns
     {
         id: 214,
-        question: "Reflexive: He cut ______ while cooking.",
-        options: ["himself", "his", "him", "he"],
+        question: "He cut ______ while cooking.",
+        options: [ "himself", "his", "he", "him" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Himself = se cortó a sí mismo."
+        tip: "Reflexive: Himself = se cortó a sí mismo."
     },
     {
         id: 215,
-        question: "Relative: The place ______ we met.",
-        options: ["where", "which", "who", "when"],
-        correct: 0,
+        question: "The place ______ we met.",
+        options: [ "which", "who", "when", "where" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Where para lugares."
+        tip: "Relative: Where para lugares."
     },
     {
         id: 216,
-        question: "Object: Don't wait for ______.",
-        options: ["us", "we", "our", "ours"],
-        correct: 0,
+        question: "Don't wait for ______.",
+        options: [ "we", "us", "our", "ours" ],
+        correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Wait for US (pronombre objeto)."
+        tip: "Object: Wait for US (pronombre objeto)."
     },
     {
         id: 217,
-        question: "Possessive: Is this pen ______?",
-        options: ["yours", "your", "you", "my"],
+        question: "Is this pen ______?",
+        options: [ "yours", "your", "my", "you" ],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "Yours va al final (pronombre)."
+        tip: "Possessive: Yours va al final (pronombre)."
     },
     {
         id: 218,
-        question: "Indefinite: There is ______ in the fridge.",
-        options: ["nothing", "anything", "any", "no"],
-        correct: 0,
+        question: "There is ______ in the fridge.",
+        options: [ "any", "anything", "no", "nothing" ],
+        correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
-        tip: "There is NOTHING (oración positiva con significado negativo)."
+        tip: "Indefinite: There is NOTHING (oración positiva con significado negativo)."
     },
 
     // Tenses
     {
         id: 314,
-        question: "Present Perfect: She ______ (just) arrived.",
-        options: ["has just", "just has", "did just", "is just"],
+        question: "She ______ (just) arrived.",
+        options: [ "has just", "did just", "is just", "just has" ],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Has just arrived (acaba de llegar)."
+        tip: "Present Perfect: Has just arrived (acaba de llegar)."
     },
     {
         id: 315,
-        question: "Past Continuous: They ______ playing chess at 8pm.",
-        options: ["were", "was", "are", "did"],
-        correct: 0,
+        question: "They ______ playing chess at 8pm.",
+        options: [ "was", "did", "were", "are" ],
+        correct: 2,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "They WERE playing."
+        tip: "Past Continuous: They WERE playing."
     },
     {
         id: 316,
-        question: "Present Simple: He usually ______ coffee.",
-        options: ["drinks", "drink", "is drinking", "drank"],
+        question: "He usually ______ coffee.",
+        options: [ "drinks", "drank", "is drinking", "drink" ],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Habitual -> Drinks (3ª persona)."
+        tip: "Present Simple: Habitual -> Drinks (3ª persona)."
     },
     {
         id: 317,
-        question: "Past Perfect: When I arrived, the movie ______ already started.",
-        options: ["had", "has", "was", "did"],
-        correct: 0,
+        question: "When I arrived, the movie ______ already started.",
+        options: [ "was", "has", "did", "had" ],
+        correct: 3,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Had started (había empezado)."
+        tip: "Past Perfect: Had started (había empezado)."
     },
     {
         id: 318,
-        question: "State Verbs: I ______ this music.",
-        options: ["love", "am loving", "was loving", "been loving"],
-        correct: 0,
+        question: "I ______ this music.",
+        options: [ "was loving", "love", "am loving", "been loving" ],
+        correct: 1,
         category: "Grammar",
         modes: ["tenses"],
-        tip: "Love es un verbo de estado, no suele usarse en continuo."
+        tip: "State Verbs: Love es un verbo de estado, no suele usarse en continuo."
     },
 
     // Mixed
     {
         id: 414,
-        question: "Gerund: I'm good at ______.",
-        options: ["drawing", "draw", "to draw", "drew"],
+        question: "I'm good at ______.",
+        options: [ "drawing", "to draw", "draw", "drew" ],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Good AT + Ing."
+        tip: "Gerund: Good AT + Ing."
     },
     {
         id: 415,
-        question: "Infinitive: I want ______ travel.",
-        options: ["to", "for", "in", "at"],
-        correct: 0,
+        question: "I want ______ travel.",
+        options: [ "at", "to", "in", "for" ],
+        correct: 1,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Want TO travel."
+        tip: "Infinitive: Want TO travel."
     },
     {
         id: 416,
-        question: "Preposition: Depends ______ the weather.",
-        options: ["on", "of", "in", "from"],
-        correct: 0,
+        question: "Depends ______ the weather.",
+        options: [ "in", "from", "on", "of" ],
+        correct: 2,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Depends ON."
+        tip: "Preposition: Depends ON."
     },
     {
         id: 417,
-        question: "Article: She is ______ honest person.",
-        options: ["an", "a", "the", "-"],
-        correct: 0,
+        question: "She is ______ honest person.",
+        options: [ "a", "an", "-", "the" ],
+        correct: 1,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "AN honest (h muda)."
+        tip: "Article: AN honest (h muda)."
     },
     {
         id: 418,
-        question: "Quantifier: I don't have ______ time.",
-        options: ["much", "many", "some", "a lot"],
-        correct: 0,
+        question: "I don't have ______ time.",
+        options: [ "some", "many", "a lot", "much" ],
+        correct: 3,
         category: "Grammar",
         modes: ["mixed"],
-        tip: "Much time (incontable, negativo)."
+        tip: "Quantifier: Much time (incontable, negativo)."
     },
 
     // Future
     {
         id: 514,
-        question: "Future Perfect: By 2030, I will ______ finished.",
-        options: ["have", "be", "had", "am"],
-        correct: 0,
+        question: "By 2030, I will ______ finished.",
+        options: [ "had", "have", "be", "am" ],
+        correct: 1,
         category: "Grammar",
         modes: ["future"],
-        tip: "Will have finished (habré terminado)."
+        tip: "Future Perfect: Will have finished (habré terminado)."
     },
     {
         id: 515,
-        question: "Prediction: I think you ______ like it.",
-        options: ["will", "are going to", "shall", "must"],
-        correct: 0,
+        question: "I think you ______ like it.",
+        options: [ "shall", "must", "are going to", "will" ],
+        correct: 3,
         category: "Grammar",
         modes: ["future"],
-        tip: "I think + Will (opinión)."
+        tip: "Prediction: I think + Will (opinión)."
     },
     {
         id: 516,
-        question: "Offer: ______ I get you a drink?",
-        options: ["Can", "Will", "Do", "Have"],
-        correct: 0,
+        question: "______ I get you a drink?",
+        options: [ "Do", "Will", "Can", "Have" ],
+        correct: 2,
         category: "Grammar",
         modes: ["future"],
-        tip: "Can I... (ofrecimiento informal)."
+        tip: "Offer: Can I... (ofrecimiento informal)."
     },
     {
         id: 517,
-        question: "Plan: We ______ to move next year.",
-        options: ["are going", "will", "go", "shall"],
-        correct: 0,
+        question: "We ______ to move next year.",
+        options: [ "go", "will", "are going", "shall" ],
+        correct: 2,
         category: "Grammar",
         modes: ["future"],
-        tip: "Are going TO move."
+        tip: "Plan: Are going TO move."
     },
     {
         id: 518,
-        question: "Future Continuous: I will ______ working at 9.",
-        options: ["be", "have", "am", "do"],
-        correct: 0,
+        question: "I will ______ working at 9.",
+        options: [ "am", "do", "be", "have" ],
+        correct: 2,
         category: "Grammar",
         modes: ["future"],
-        tip: "Will BE working."
+        tip: "Future Continuous: Will BE working."
     }
 ];
 
