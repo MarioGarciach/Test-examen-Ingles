@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Inglés Profesional</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.2">
+</head>
+
+<body>
+    <div class="app-background"></div>
+    <div class="container">
+        <header>
+            <button id="settings-btn" class="settings-btn" title="Configuración">⚙️</button>
+            <h1>English Skills Exam</h1>
+            <p class="subtitle">Simulador de Examen Profesional</p>
+
+            <div class="stats-bar">
+                <div class="stat-box">
+                    <span class="stat-label">Examen</span>
+                    <span id="current-exam" class="stat-value">1/5</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Puntuación</span>
+                    <span id="score" class="stat-value">0.00</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Correctas</span>
+                    <span id="correct-count" class="stat-value success">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Incorrectas</span>
+                    <span id="incorrect-count" class="stat-value danger">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Pantalla de inicio -->
+            <div id="start-screen" class="exam-section active">
+                <div class="card intro-card">
+                    <div class="icon-container">
+                        🎓
+                    </div>
+                    <h2>Instrucciones del Examen</h2>
+                    <p>Bienvenido al simulador de examen de inglés profesional. Este sistema generará 5 exámenes
+                        aleatorios para poner a prueba tus conocimientos.</p>
+
+                    <div class="rules-container">
+                        <h3>📋 Reglas de puntuación</h3>
+                        <ul>
+                            <li>✅ Cada respuesta correcta suma <strong>0.33 puntos</strong></li>
+                            <li>⚠️ Cada <strong>3 respuestas incorrectas</strong> restan <strong>0.33 punto</strong>
+                            </li>
+                            <li>💡 Recibirás consejos útiles al equivocarte</li>
+                        </ul>
+                    </div>
+
+                    <button id="start-btn" class="btn btn-primary btn-lg pulse-animation">Comenzar Aventura</button>
+                </div>
+            </div>
+
+            <!-- Exámenes -->
+            <div id="exam-container" class="exam-section">
+                <div id="questions-container" class="fade-in"></div>
+
+                <div class="navigation">
+                    <button id="prev-btn" class="btn btn-secondary">← Anterior</button>
+                    <button id="next-btn" class="btn btn-primary">Siguiente →</button>
+                    <button id="submit-exam-btn" class="btn btn-success" style="display: none;">Finalizar
+                        Examen</button>
+                </div>
+            </div>
+
+            <!-- Resultados del examen -->
+            <div id="results-screen" class="exam-section">
+                <div class="results-container">
+                    <h2>Resultados del Examen <span id="exam-number">1</span></h2>
+
+                    <div class="score-wrapper">
+                        <div id="score-circle" class="score-circle">0%</div>
+                    </div>
+
+                    <div class="score-display">Puntuación: <span id="final-score">0.00</span></div>
+                    <p id="result-message" class="result-message"></p>
+
+                    <div id="results-list" class="results-list"></div>
+
+                    <div class="action-buttons">
+                        <button id="review-exam-btn" class="btn btn-secondary">Revisar Respuestas</button>
+                        <button id="next-exam-btn" class="btn btn-primary">Siguiente Examen →</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resultados finales -->
+            <div id="final-results-screen" class="exam-section">
+                <div class="results-container">
+                    <div class="trophy-icon">🏆</div>
+                    <h2>Resumen Final</h2>
+                    <div class="score-display">Puntuación Total: <span id="total-final-score">0.00</span></div>
+
+                    <div class="summary-box">
+                        <h3>📊 Desglose por Examen</h3>
+                        <div id="exams-summary" class="summary-grid"></div>
+                    </div>
+
+                    <div class="improvement-box">
+                        <h3>🚀 Áreas de Mejora</h3>
+                        <div id="improvement-areas"></div>
+                    </div>
+
+                    <button id="restart-btn" class="btn btn-primary btn-lg">Volver a Empezar</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-settings" class="close-btn">&times;</span>
+                <h2>Configuración de Visualización</h2>
+
+                <div class="setting-item">
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>🌙 Modo Oscuro</span>
+                </div>
+
+                <div class="setting-item">
+                    <label class="switch">
+                        <input type="checkbox" id="sepia-mode-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span>📖 Modo Lectura (Sepia)</span>
+                </div>
+
+                <div id="sepia-controls" class="setting-control hidden">
+                    <label for="sepia-slider">Intensidad Sepia:</label>
+                    <input type="range" id="sepia-slider" min="0" max="100" value="20">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Hecho por Mario con amor ❤️</p>
+        </footer>
+    </div>
+
+    <script src="script.js?v=1.2"></script>
+</body>
+
+</html>
