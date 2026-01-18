@@ -1358,13 +1358,28 @@ function setupEventListeners() {
 function setupSettings() {
     // Dark Mode
     darkModeToggle.addEventListener('change', (e) => {
-        document.body.classList.toggle('dark-mode', e.target.checked);
+        const isChecked = e.target.checked;
+        document.body.classList.toggle('dark-mode', isChecked);
+
+        // If enabling Dark Mode, disable Sepia Mode
+        if (isChecked && sepiaModeToggle.checked) {
+            sepiaModeToggle.checked = false;
+            document.body.classList.remove('sepia-mode');
+            sepiaControls.classList.add('hidden');
+        }
     });
 
     // Sepia Mode
     sepiaModeToggle.addEventListener('change', (e) => {
-        document.body.classList.toggle('sepia-mode', e.target.checked);
-        sepiaControls.classList.toggle('hidden', !e.target.checked);
+        const isChecked = e.target.checked;
+        document.body.classList.toggle('sepia-mode', isChecked);
+        sepiaControls.classList.toggle('hidden', !isChecked);
+
+        // If enabling Sepia Mode, disable Dark Mode
+        if (isChecked && darkModeToggle.checked) {
+            darkModeToggle.checked = false;
+            document.body.classList.remove('dark-mode');
+        }
     });
 
     // Sepia Slider

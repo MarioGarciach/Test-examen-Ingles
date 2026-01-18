@@ -754,6 +754,8 @@ footer p {
     max-width: 400px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     position: relative;
+    margin: auto;
+    /* Ensures centering in flex container */
     animation: slideIn 0.3s ease;
 }
 
