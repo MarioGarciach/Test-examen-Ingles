@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen de Inglés Profesional</title>
+
+    <!-- Security Policies (OWASP Top 10 Compliance) -->
+    <!-- Content Security Policy: Restrict sources to self and Google Fonts -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <!-- Referrer Policy: Protect user privacy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- X-Content-Type-Options (Note: Best set by server, added here for completeness) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.3">
 </head>
 
 <body>
@@ -43,26 +52,65 @@
 
         <main>
             <!-- Pantalla de inicio -->
+            <!-- Pantalla de inicio -->
             <div id="start-screen" class="exam-section active">
-                <div class="card intro-card">
-                    <div class="icon-container">
-                        🎓
-                    </div>
-                    <h2>Instrucciones del Examen</h2>
-                    <p>Bienvenido al simulador de examen de inglés profesional. Este sistema generará 5 exámenes
-                        aleatorios para poner a prueba tus conocimientos.</p>
+                <div class="intro-header">
+                    <h2>Selecciona tu Desafío</h2>
+                    <p>Elige un modo para empezar a practicar</p>
+                </div>
 
-                    <div class="rules-container">
-                        <h3>📋 Reglas de puntuación</h3>
-                        <ul>
-                            <li>✅ Cada respuesta correcta suma <strong>0.33 puntos</strong></li>
-                            <li>⚠️ Cada <strong>3 respuestas incorrectas</strong> restan <strong>0.33 punto</strong>
-                            </li>
-                            <li>💡 Recibirás consejos útiles al equivocarte</li>
-                        </ul>
+                <div class="modes-grid">
+                    <!-- General Exam -->
+                    <div class="mode-card accent-blue">
+                        <div class="mode-icon">🎓</div>
+                        <h3>Examen General</h3>
+                        <p>30 preguntas variadas de todos los temas.</p>
+                        <button class="btn btn-primary mode-btn" data-mode="general">Comenzar Test</button>
                     </div>
 
-                    <button id="start-btn" class="btn btn-primary btn-lg pulse-animation">Comenzar Aventura</button>
+                    <!-- Modals -->
+                    <div class="mode-card accent-purple">
+                        <div class="mode-icon">⚡</div>
+                        <h3>Modals</h3>
+                        <p>Must, should, can, might...</p>
+                        <button class="btn btn-outline mode-btn" data-mode="modals">Practicar</button>
+                    </div>
+
+                    <!-- Pronouns -->
+                    <div class="mode-card accent-green">
+                        <div class="mode-icon">👤</div>
+                        <h3>Pronouns</h3>
+                        <p>Who, which, whose, myself...</p>
+                        <button class="btn btn-outline mode-btn" data-mode="pronouns">Practicar</button>
+                    </div>
+
+                    <!-- Tenses -->
+                    <div class="mode-card accent-orange">
+                        <div class="mode-icon">⏳</div>
+                        <h3>Tenses</h3>
+                        <p>Pasado, presente, perfecto...</p>
+                        <button class="btn btn-outline mode-btn" data-mode="tenses">Practicar</button>
+                    </div>
+
+                    <!-- Mixed Grammar -->
+                    <div class="mode-card accent-teal">
+                        <div class="mode-icon">🧩</div>
+                        <h3>Mixed Grammar</h3>
+                        <p>For/Since, Passive, Conditionals</p>
+                        <button class="btn btn-outline mode-btn" data-mode="mixed">Practicar</button>
+                    </div>
+
+                    <!-- Future Forms -->
+                    <div class="mode-card accent-red">
+                        <div class="mode-icon">🚀</div>
+                        <h3>Future Forms</h3>
+                        <p>Will, Going to, Present Cont.</p>
+                        <button class="btn btn-outline mode-btn" data-mode="future">Practicar</button>
+                    </div>
+                </div>
+
+                <div class="rules-footer">
+                    <p>ℹ️ <strong>Reglas:</strong> Correctas +0.33 pts | 3 Incorrectas -0.33 pts</p>
                 </div>
             </div>
 
@@ -71,6 +119,7 @@
                 <div id="questions-container" class="fade-in"></div>
 
                 <div class="navigation">
+                    <button id="exit-btn" class="btn btn-secondary">❌ Salir</button>
                     <button id="prev-btn" class="btn btn-secondary">← Anterior</button>
                     <button id="next-btn" class="btn btn-primary">Siguiente →</button>
                     <button id="submit-exam-btn" class="btn btn-success" style="display: none;">Finalizar
@@ -155,7 +204,7 @@
         </footer>
     </div>
 
-    <script src="script.js?v=1.2"></script>
+    <script src="script.js?v=1.3"></script>
 </body>
 
 </html>

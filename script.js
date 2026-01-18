@@ -815,13 +815,188 @@ const questionDatabase = [
         category: "Grammar",
         modes: ["future"],
         tip: "Shall I...? para ofrecerse."
+    },
+
+    // --- NEW EXPANSION QUESTIONS ---
+    // General / Vocabulary Expansion
+    {
+        id: 31,
+        question: "Professional 'Greeting' in email:",
+        options: ["Dear Mr. Smith,", "Hi Smith,", "Smith,", "Hey!"],
+        correct: 0,
+        category: "Professional Communication",
+        modes: ["general"],
+        tip: "Dear + Apellido es el estándar formal."
+    },
+    {
+        id: 32,
+        question: "Meaning of 'Deadline':",
+        options: ["The final date to complete a task", "A dead telephone line", "A meeting point", "The start of a project"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Deadline = fecha límite."
+    },
+    {
+        id: 33,
+        question: "Opposite of 'Increase':",
+        options: ["Decrease", "Incline", "Raise", "Expand"],
+        correct: 0,
+        category: "Vocabulary",
+        modes: ["general"],
+        tip: "Increase (aumentar) vs Decrease (disminuir)."
+    },
+
+    // Modals Expansion
+    {
+        id: 111,
+        question: "Logical Assumption: The lights are off. They ______ be home.",
+        options: ["can't", "mustn't", "shouldn't", "needn't"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals", "general"],
+        tip: "Can't be = deducción lógica negativa (seguro que no)."
+    },
+    {
+        id: 112,
+        question: "Past Ability: I ______ swim when I was 5.",
+        options: ["could", "can", "should", "must"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals", "general"],
+        tip: "Could es el pasado de Can."
+    },
+    {
+        id: 113,
+        question: "Advice: You ______ look tired. Go to sleep.",
+        options: ["should", "must", "can", "have to"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["modals"],
+        tip: "Should se usa para consejos personales."
+    },
+
+    // Pronouns Expansion
+    {
+        id: 211,
+        question: "Object Pronoun: She called ______ yesterday.",
+        options: ["him", "he", "his", "himself"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns", "general"],
+        tip: "Him es el pronombre objeto (recibe la acción)."
+    },
+    {
+        id: 212,
+        question: "Reflexive Emphasis: The CEO ______ announced the news.",
+        options: ["himself", "his", "him", "he"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Himself enfatiza que fue él persona (el mismo)."
+    },
+    {
+        id: 213,
+        question: "Demonstrative: ______ are my files over there.",
+        options: ["Those", "These", "That", "This"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["pronouns"],
+        tip: "Those = plural y lejos."
+    },
+
+    // Tenses Expansion
+    {
+        id: 311,
+        question: "Past Continuous: While I ______ working, the power went out.",
+        options: ["was", "am", "were", "had"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses", "general"],
+        tip: "Was working -> acción en progreso en pasado."
+    },
+    {
+        id: 312,
+        question: "Present Perfect vs Past: I ______ him since 2010.",
+        options: ["have known", "know", "knew", "am knowing"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses"],
+        tip: "Since + fecha requiere Present Perfect (have known)."
+    },
+    {
+        id: 313,
+        question: "Future Fact: He ______ be 30 next month.",
+        options: ["will", "is going to", "is", "shall"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["tenses", "future"],
+        tip: "Will para hechos futuros inevitables (edad)."
+    },
+
+    // Mixed Expansion
+    {
+        id: 411,
+        question: "Tag Question: You are coming, ______?",
+        options: ["aren't you", "don't you", "won't you", "isn't it"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed", "general"],
+        tip: "Si la oración es positiva (+), el tag es negativo (-)."
+    },
+    {
+        id: 412,
+        question: "Preposition: I'm interested ______ learning more.",
+        options: ["in", "on", "at", "about"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Interested IN algo."
+    },
+    {
+        id: 413,
+        question: "Comparative: This report is ______ than the last one.",
+        options: ["better", "gooder", "more good", "best"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["mixed"],
+        tip: "Better es el comparativo irregular de Good."
+    },
+
+    // Future Forms Expansion
+    {
+        id: 511,
+        question: "Schedule: The meeting ______ at 9:00 AM.",
+        options: ["starts", "will start", "is starting", "start"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future", "general"],
+        tip: "Presente Simple para horarios fijos/programados."
+    },
+    {
+        id: 512,
+        question: "Arrangement: I ______ lunch with the client tomorrow.",
+        options: ["am having", "will have", "have", "had"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Present Continuous para planes sociales confirmados."
+    },
+    {
+        id: 513,
+        question: "Prediction (No evidence): In 2050, cars ______ fly.",
+        options: ["will", "are going to", "must", "can"],
+        correct: 0,
+        category: "Grammar",
+        modes: ["future"],
+        tip: "Will para predicciones lejanas o sin prueba visual."
     }
 ];
 
 // Variables de estado
 let visibleQuestions = [];
 let userAnswers = [];
-let questionsPerExam = 6;
+let questionsPerExam = 30; // UPDATED to 30
 let currentMode = 'general';
 
 let generalExamState = {
@@ -876,6 +1051,14 @@ function setupEventListeners() {
 
     prevBtn.addEventListener('click', () => navigateQuestion(-1));
     nextBtn.addEventListener('click', () => navigateQuestion(1));
+
+    // Exit Button
+    document.getElementById('exit-btn').addEventListener('click', () => {
+        if (confirm("¿Seguro que quieres salir? Perderás el progreso actual.")) {
+            showStartScreen();
+        }
+    });
+
     submitExamBtn.addEventListener('click', finishCurrentExam);
     reviewExamBtn.addEventListener('click', reviewExam);
     nextExamBtn.addEventListener('click', nextGeneralExamStep);
@@ -909,12 +1092,14 @@ function setupSettings() {
 }
 
 function showStartScreen() {
+    window.scrollTo(0, 0); // Scroll to top
     hideAllSections();
     startScreen.classList.add('active');
     resetStats();
 }
 
 function startMode(mode) {
+    window.scrollTo(0, 0); // Scroll to top
     currentMode = mode;
     hideAllSections();
     examContainer.classList.add('active');
@@ -929,18 +1114,19 @@ function startMode(mode) {
 function startGeneralExamSequence() {
     generalExamState = {
         currentExamIndex: 0,
-        totalExams: 5,
+        totalExams: 1, // UPDATED: Just 1 exam of 30 questions
         examResults: [],
         score: 0,
         consecutiveIncorrect: 0
     };
     singleModeState.active = false;
-    currentExamEl.textContent = `1/${generalExamState.totalExams}`;
+    currentExamEl.textContent = `General`;
     startNextGeneralExam();
 }
 
 function startNextGeneralExam() {
-    let questions = getQuestionsByMode('general', 6);
+    window.scrollTo(0, 0); // Scroll to top
+    let questions = getQuestionsByMode('general', 30); // UPDATED to 30
     visibleQuestions = questions;
     userAnswers = new Array(visibleQuestions.length).fill(null);
     renderQuestions(visibleQuestions);
@@ -1001,23 +1187,61 @@ function renderQuestions(questions) {
             </div>
             <div class="options">
                 ${q.options.map((opt, i) => `
-                    <div class="option" data-idx="${i}" onclick="selectOption(${index}, ${i})">
+                    <div class="option" data-idx="${i}">
                         ${opt}
                     </div>
                 `).join('')}
             </div>
             <div class="feedback" id="feedback-${index}"></div>
         `;
+
+        // Attach event listeners programmatically (CSP Compliant)
+        const opts = qEl.querySelectorAll('.option');
+        opts.forEach((opt, i) => {
+            opt.addEventListener('click', () => selectOption(index, i));
+        });
+
         questionsContainer.appendChild(qEl);
     });
     updateNavigation(0);
 }
 
 function selectOption(qIndex, optIndex) {
+    // Prevent changing answer if already answered (Lock mechanics)
+    if (userAnswers[qIndex] !== null && userAnswers[qIndex] !== undefined) return;
+
     userAnswers[qIndex] = optIndex;
+    const currentQ = visibleQuestions[qIndex];
+    const isCorrect = (optIndex === currentQ.correct);
+
     const card = questionsContainer.children[qIndex];
-    card.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
-    card.querySelectorAll('.option')[optIndex].classList.add('selected');
+    const opts = card.querySelectorAll('.option');
+
+    const selectedOpt = opts[optIndex];
+    selectedOpt.classList.add('selected');
+
+    // Immediate Feedback Logic
+    if (isCorrect) {
+        selectedOpt.classList.add('correct');
+    } else {
+        selectedOpt.classList.add('incorrect');
+        // Highlight the correct answer so user knows
+        opts[currentQ.correct].classList.add('correct');
+    }
+
+    // Show Feedback Div immediately
+    const feedbackEl = card.querySelector('.feedback');
+    feedbackEl.innerHTML = isCorrect ?
+        `<strong>¡Correcto!</strong>` :
+        `<strong>Incorrecto</strong><br>La respuesta correcta era: "<strong>${currentQ.options[currentQ.correct]}</strong>"<div class="tip">💡 Tip: ${currentQ.tip}</div>`;
+
+    feedbackEl.className = `feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+
+    // Disable further interactions on this question
+    opts.forEach(opt => {
+        opt.style.pointerEvents = 'none';
+        opt.style.cursor = 'default';
+    });
 }
 
 function navigateQuestion(direction) {
@@ -1085,6 +1309,7 @@ function finishCurrentExam() {
 }
 
 function showSingleExamResults(correct, incorrect, score) {
+    window.scrollTo(0, 0); // Scroll to top
     hideAllSections();
     resultsScreen.classList.add('active');
 
@@ -1118,21 +1343,13 @@ function showSingleExamResults(correct, incorrect, score) {
         list.appendChild(item);
     });
 
-    if (singleModeState.active) {
-        nextExamBtn.textContent = "Volver al Menú";
-        nextExamBtn.onclick = showStartScreen;
-    } else {
-        if (generalExamState.currentExamIndex < generalExamState.totalExams - 1) {
-            nextExamBtn.textContent = `Siguiente Examen (${generalExamState.currentExamIndex + 2}/5) →`;
-            nextExamBtn.onclick = nextGeneralExamStep;
-        } else {
-            nextExamBtn.textContent = "Ver Resultados Finales →";
-            nextExamBtn.onclick = showFinalResults;
-        }
-    }
+    // Always offer "Back to Menu" now that General is single-exam
+    nextExamBtn.textContent = "Volver al Menú";
+    nextExamBtn.onclick = showStartScreen;
 }
 
 function reviewExam() {
+    window.scrollTo(0, 0); // Scroll to top
     hideAllSections();
     examContainer.classList.add('active');
 

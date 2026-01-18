@@ -411,6 +411,16 @@ footer p {
     gap: 5px;
 }
 
+/* Section visibility control */
+.exam-section {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.exam-section.active {
+    display: block;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -874,4 +884,29 @@ body.sepia-mode .mode-icon {
 body.sepia-mode .container {
     /* Apply intensity mix if needed */
     filter: sepia(calc(var(--sepia-amount, 0.2) * 0.5));
+}
+
+/* Dark Mode specific feedback overrides */
+body.dark-mode .option.correct {
+    background-color: rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+    color: #34d399;
+}
+
+body.dark-mode .option.incorrect {
+    background-color: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+    color: #fca5a5;
+}
+
+body.dark-mode .feedback.correct {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-left-color: #10b981;
+    color: #34d399;
+}
+
+body.dark-mode .feedback.incorrect {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left-color: #ef4444;
+    color: #fca5a5;
 }
