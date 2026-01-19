@@ -4,7 +4,7 @@ const questionDatabase = [
     {
         id: 1,
         question: "¿Qué prefijo se debe usar para transformar 'HAPPY' en su antónimo?",
-        options: [ "dis-", "un-", "mis-", "re-" ],
+        options: ["dis-", "un-", "mis-", "re-"],
         correct: 1,
         category: "Vocabulary",
         modes: ["general", "mixed"],
@@ -55,7 +55,7 @@ const questionDatabase = [
     {
         id: 5,
         question: "'The team meeting is scheduled ______ Thursday.'",
-        options: [ "on", "at", "in", "by" ],
+        options: ["on", "at", "in", "by"],
         correct: 0,
         category: "Grammar",
         modes: ["general", "mixed"],
@@ -78,7 +78,7 @@ const questionDatabase = [
     {
         id: 7,
         question: "¿Cómo se llama la estrategia de lectura para buscar datos específicos?",
-        options: [ "Intensive reading", "Scanning", "Skimming", "Reading for detail" ],
+        options: ["Intensive reading", "Scanning", "Skimming", "Reading for detail"],
         correct: 1,
         category: "Reading Skills",
         modes: ["general"],
@@ -101,7 +101,7 @@ const questionDatabase = [
     {
         id: 9,
         question: "¿Qué documento registra un accidente laboral?",
-        options: [ "Safety Memo", "Annual Review", "Incident report", "Invoice" ],
+        options: ["Safety Memo", "Annual Review", "Incident report", "Invoice"],
         correct: 2,
         category: "Professional Vocabulary",
         modes: ["general"],
@@ -152,7 +152,7 @@ const questionDatabase = [
     {
         id: 13,
         question: "This is the guide ______ explains the process.",
-        options: [ "whose", "that", "where", "who" ],
+        options: ["whose", "that", "where", "who"],
         correct: 1,
         category: "Grammar",
         modes: ["general", "mixed"],
@@ -161,7 +161,7 @@ const questionDatabase = [
     {
         id: 14,
         question: "'I ______ prepare the list.'",
-        options: [ "am going to", "will", "going to", "prepare" ],
+        options: ["am going to", "will", "going to", "prepare"],
         correct: 0,
         category: "Grammar",
         modes: ["general", "future"],
@@ -170,7 +170,7 @@ const questionDatabase = [
     {
         id: 15,
         question: "'Submit a report' es un ejemplo de:",
-        options: [ "Collocation", "Idiom", "Phrasal Verb", "Slang" ],
+        options: ["Collocation", "Idiom", "Phrasal Verb", "Slang"],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -179,7 +179,7 @@ const questionDatabase = [
     {
         id: 16,
         question: "Lectura rápida para idea general (gist):",
-        options: [ "Proofreading", "Close reading", "Skimming", "Scanning" ],
+        options: ["Proofreading", "Close reading", "Skimming", "Scanning"],
         correct: 2,
         category: "Reading Skills",
         modes: ["general"],
@@ -216,7 +216,7 @@ const questionDatabase = [
     {
         id: 19,
         question: "Sinónimo de 'ASSIST':",
-        options: [ "Help", "Assign", "Attend", "Assert" ],
+        options: ["Help", "Assign", "Attend", "Assert"],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -281,7 +281,7 @@ const questionDatabase = [
     {
         id: 24,
         question: "Despedida formal (conoces el nombre):",
-        options: [ "Yours sincerely", "Cheers", "Best regards", "Yours faithfully" ],
+        options: ["Yours sincerely", "Cheers", "Best regards", "Yours faithfully"],
         correct: 0,
         category: "Professional Communication",
         modes: ["general"],
@@ -290,7 +290,7 @@ const questionDatabase = [
     {
         id: 25,
         question: "Elemento clave en el asunto de un email:",
-        options: [ "Urgent flag always", "Blank space", "Clear summary of content", "Sender's nickname" ],
+        options: ["Urgent flag always", "Blank space", "Clear summary of content", "Sender's nickname"],
         correct: 2,
         category: "Professional Communication",
         modes: ["general"],
@@ -327,7 +327,7 @@ const questionDatabase = [
     {
         id: 28,
         question: "Pronombre relativo para personas:",
-        options: [ "The client which called...", "The client where called...", "The client whose called...", "The client who called..." ],
+        options: ["The client which called...", "The client where called...", "The client whose called...", "The client who called..."],
         correct: 3,
         category: "Grammar",
         modes: ["general", "pronouns"],
@@ -336,7 +336,7 @@ const questionDatabase = [
     {
         id: 29,
         question: "Colocación verbal correcta con 'REPORT':",
-        options: [ "Do a report", "Submit a report", "Say a report", "Tell a report" ],
+        options: ["Do a report", "Submit a report", "Say a report", "Tell a report"],
         correct: 1,
         category: "Collocations",
         modes: ["general"],
@@ -361,7 +361,7 @@ const questionDatabase = [
     {
         id: 101,
         question: "You ______ wear safety gear.",
-        options: [ "might", "must", "can", "should" ],
+        options: ["might", "must", "can", "should"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -370,7 +370,7 @@ const questionDatabase = [
     {
         id: 102,
         question: "You ______ finish it today if you're busy.",
-        options: [ "don't have to", "shouldn't", "can't", "mustn't" ],
+        options: ["don't have to", "shouldn't", "can't", "mustn't"],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
@@ -379,7 +379,7 @@ const questionDatabase = [
     {
         id: 103,
         question: "______ I use your computer?",
-        options: [ "Should", "Will", "May", "Must" ],
+        options: ["Should", "Will", "May", "Must"],
         correct: 2,
         category: "Grammar",
         modes: ["modals"],
@@ -388,7 +388,7 @@ const questionDatabase = [
     {
         id: 104,
         question: "You ______ smoke here.",
-        options: [ "mustn't", "wouldn't", "don't have to", "needn't" ],
+        options: ["mustn't", "wouldn't", "don't have to", "needn't"],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
@@ -397,7 +397,7 @@ const questionDatabase = [
     {
         id: 105,
         question: "He ______ speak Arabic fluently.",
-        options: [ "may", "must", "can", "shall" ],
+        options: ["may", "must", "can", "shall"],
         correct: 2,
         category: "Grammar",
         modes: ["modals"],
@@ -406,7 +406,7 @@ const questionDatabase = [
     {
         id: 106,
         question: "You ______ see a doctor.",
-        options: [ "may", "can", "might", "should" ],
+        options: ["may", "can", "might", "should"],
         correct: 3,
         category: "Grammar",
         modes: ["modals"],
@@ -415,7 +415,7 @@ const questionDatabase = [
     {
         id: 107,
         question: "He ______ be tired after the marathon.",
-        options: [ "should", "can", "need", "must" ],
+        options: ["should", "can", "need", "must"],
         correct: 3,
         category: "Grammar",
         modes: ["modals"],
@@ -424,7 +424,7 @@ const questionDatabase = [
     {
         id: 108,
         question: "______ you open the window?",
-        options: [ "May", "Could", "Must", "Should" ],
+        options: ["May", "Could", "Must", "Should"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -433,7 +433,7 @@ const questionDatabase = [
     {
         id: 109,
         question: "It ______ rain later.",
-        options: [ "might", "has to", "must", "should" ],
+        options: ["might", "has to", "must", "should"],
         correct: 0,
         category: "Grammar",
         modes: ["modals"],
@@ -442,7 +442,7 @@ const questionDatabase = [
     {
         id: 110,
         question: "I ______ run fast when I was young.",
-        options: [ "should", "could", "may", "can" ],
+        options: ["should", "could", "may", "can"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -453,7 +453,7 @@ const questionDatabase = [
     {
         id: 201,
         question: "That's the man ______ car was stolen.",
-        options: [ "whose", "who", "that", "which" ],
+        options: ["whose", "who", "that", "which"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -462,7 +462,7 @@ const questionDatabase = [
     {
         id: 202,
         question: "The book ______ I read is good.",
-        options: [ "which", "who", "where", "whose" ],
+        options: ["which", "who", "where", "whose"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -471,7 +471,7 @@ const questionDatabase = [
     {
         id: 203,
         question: "She hurt ______.",
-        options: [ "her", "herself", "she", "hers" ],
+        options: ["her", "herself", "she", "hers"],
         correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
@@ -480,7 +480,7 @@ const questionDatabase = [
     {
         id: 204,
         question: "______ phone is this?",
-        options: [ "Which", "Who's", "Who", "Whose" ],
+        options: ["Which", "Who's", "Who", "Whose"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -489,7 +489,7 @@ const questionDatabase = [
     {
         id: 205,
         question: "I did it ______.",
-        options: [ "mine", "me", "my", "myself" ],
+        options: ["mine", "me", "my", "myself"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -498,7 +498,7 @@ const questionDatabase = [
     {
         id: 206,
         question: "The city ______ I live.",
-        options: [ "which", "that", "when", "where" ],
+        options: ["which", "that", "when", "where"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -507,7 +507,7 @@ const questionDatabase = [
     {
         id: 207,
         question: "They love ______.",
-        options: [ "theirs", "each other", "themselves", "they" ],
+        options: ["theirs", "each other", "themselves", "they"],
         correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
@@ -516,7 +516,7 @@ const questionDatabase = [
     {
         id: 208,
         question: "This is mine, not ______.",
-        options: [ "yourself", "your", "yours", "you" ],
+        options: ["yourself", "your", "yours", "you"],
         correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
@@ -525,7 +525,7 @@ const questionDatabase = [
     {
         id: 209,
         question: "I didn't see ______.",
-        options: [ "anybody", "no one", "nobody", "somebody" ],
+        options: ["anybody", "no one", "nobody", "somebody"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -534,7 +534,7 @@ const questionDatabase = [
     {
         id: 210,
         question: "Give it to ______.",
-        options: [ "I", "mine", "me", "my" ],
+        options: ["I", "mine", "me", "my"],
         correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
@@ -545,7 +545,7 @@ const questionDatabase = [
     {
         id: 301,
         question: "Listen! Someone ______ the guitar.",
-        options: [ "plays", "played", "has played", "is playing" ],
+        options: ["plays", "played", "has played", "is playing"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -554,7 +554,7 @@ const questionDatabase = [
     {
         id: 302,
         question: "I ______ to Tokyo twice.",
-        options: [ "go", "went", "have been", "am going" ],
+        options: ["go", "went", "have been", "am going"],
         correct: 2,
         category: "Grammar",
         modes: ["tenses"],
@@ -563,7 +563,7 @@ const questionDatabase = [
     {
         id: 303,
         question: "She ______ here for 10 years.",
-        options: [ "worked", "is working", "works", "has worked" ],
+        options: ["worked", "is working", "works", "has worked"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -572,7 +572,7 @@ const questionDatabase = [
     {
         id: 304,
         question: "I ______ when the phone rang.",
-        options: [ "slept", "was sleeping", "sleep", "have slept" ],
+        options: ["slept", "was sleeping", "sleep", "have slept"],
         correct: 1,
         category: "Grammar",
         modes: ["tenses"],
@@ -581,7 +581,7 @@ const questionDatabase = [
     {
         id: 305,
         question: "By the time I arrived, he ______.",
-        options: [ "had left", "left", "leaves", "has left" ],
+        options: ["had left", "left", "leaves", "has left"],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
@@ -590,7 +590,7 @@ const questionDatabase = [
     {
         id: 306,
         question: "We ______ pizza last night.",
-        options: [ "ate", "have eaten", "were eating", "eat" ],
+        options: ["ate", "have eaten", "were eating", "eat"],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
@@ -599,7 +599,7 @@ const questionDatabase = [
     {
         id: 307,
         question: "The sun ______ in the east.",
-        options: [ "has risen", "is rising", "rose", "rises" ],
+        options: ["has risen", "is rising", "rose", "rises"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -608,7 +608,7 @@ const questionDatabase = [
     {
         id: 308,
         question: "What ______ yesterday?",
-        options: [ "do you do", "have you done", "were you doing", "did you do" ],
+        options: ["do you do", "have you done", "were you doing", "did you do"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -617,7 +617,7 @@ const questionDatabase = [
     {
         id: 309,
         question: "I ______ my keys! I can't enter.",
-        options: [ "lose", "am losing", "have lost", "lost" ],
+        options: ["lose", "am losing", "have lost", "lost"],
         correct: 2,
         category: "Grammar",
         modes: ["tenses"],
@@ -626,7 +626,7 @@ const questionDatabase = [
     {
         id: 310,
         question: "I thought you ______ come.",
-        options: [ "will", "would", "can", "may" ],
+        options: ["will", "would", "can", "may"],
         correct: 1,
         category: "Grammar",
         modes: ["tenses"],
@@ -637,7 +637,7 @@ const questionDatabase = [
     {
         id: 401,
         question: "I haven't seen him ______ 2020.",
-        options: [ "ago", "for", "from", "since" ],
+        options: ["ago", "for", "from", "since"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -646,7 +646,7 @@ const questionDatabase = [
     {
         id: 402,
         question: "We have waited ______ 2 hours.",
-        options: [ "since", "ago", "during", "for" ],
+        options: ["since", "ago", "during", "for"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -655,7 +655,7 @@ const questionDatabase = [
     {
         id: 403,
         question: "The novel ______ by Cervantes.",
-        options: [ "has written", "wrote", "was written", "writes" ],
+        options: ["has written", "wrote", "was written", "writes"],
         correct: 2,
         category: "Grammar",
         modes: ["mixed"],
@@ -664,7 +664,7 @@ const questionDatabase = [
     {
         id: 404,
         question: "English ______ spoken here.",
-        options: [ "is", "are", "has", "was" ],
+        options: ["is", "are", "has", "was"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -673,7 +673,7 @@ const questionDatabase = [
     {
         id: 405,
         question: "If you study, you ______ pass.",
-        options: [ "will", "can't", "would", "did" ],
+        options: ["will", "can't", "would", "did"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -682,7 +682,7 @@ const questionDatabase = [
     {
         id: 406,
         question: "If I were rich, I ______ buy a boat.",
-        options: [ "can", "will", "shall", "would" ],
+        options: ["can", "will", "shall", "would"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -691,7 +691,7 @@ const questionDatabase = [
     {
         id: 407,
         question: "______, it was cold.",
-        options: [ "However", "Despite", "But", "Although" ],
+        options: ["However", "Despite", "But", "Although"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -700,7 +700,7 @@ const questionDatabase = [
     {
         id: 408,
         question: "I stayed home ______ I was sick.",
-        options: [ "because", "although", "so", "but" ],
+        options: ["because", "although", "so", "but"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -709,7 +709,7 @@ const questionDatabase = [
     {
         id: 409,
         question: "I need to ______ a mistake.",
-        options: [ "have", "create", "do", "make" ],
+        options: ["have", "create", "do", "make"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -718,7 +718,7 @@ const questionDatabase = [
     {
         id: 410,
         question: "I won't go ______ you go.",
-        options: [ "if", "when", "as", "unless" ],
+        options: ["if", "when", "as", "unless"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -729,7 +729,7 @@ const questionDatabase = [
     {
         id: 501,
         question: "Look at the clouds! It ______ rain.",
-        options: [ "is going to", "will", "is raining", "rains" ],
+        options: ["is going to", "will", "is raining", "rains"],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
@@ -738,7 +738,7 @@ const questionDatabase = [
     {
         id: 502,
         question: "Robots ______ take over the world.",
-        options: [ "take", "are going to", "are taking", "will" ],
+        options: ["take", "are going to", "are taking", "will"],
         correct: 3,
         category: "Grammar",
         modes: ["future"],
@@ -747,7 +747,7 @@ const questionDatabase = [
     {
         id: 503,
         question: "I ______ the dentist tomorrow at 10.",
-        options: [ "see", "am seeing", "saw", "will see" ],
+        options: ["see", "am seeing", "saw", "will see"],
         correct: 1,
         category: "Grammar",
         modes: ["future"],
@@ -756,7 +756,7 @@ const questionDatabase = [
     {
         id: 504,
         question: "The phone is ringing. I ______ answer it.",
-        options: [ "am answering", "am going to", "will", "answer" ],
+        options: ["am answering", "am going to", "will", "answer"],
         correct: 2,
         category: "Grammar",
         modes: ["future"],
@@ -765,7 +765,7 @@ const questionDatabase = [
     {
         id: 505,
         question: "I will call you when I ______.",
-        options: [ "arrive", "am arriving", "will arrive", "arrived" ],
+        options: ["arrive", "am arriving", "will arrive", "arrived"],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
@@ -774,7 +774,7 @@ const questionDatabase = [
     {
         id: 506,
         question: "This time tomorrow, I ______ flying to Paris.",
-        options: [ "am", "will", "was", "will be" ],
+        options: ["am", "will", "was", "will be"],
         correct: 3,
         category: "Grammar",
         modes: ["future"],
@@ -783,7 +783,7 @@ const questionDatabase = [
     {
         id: 507,
         question: "I ______ buy a new car soon.",
-        options: [ "am going to", "buying", "buy", "will" ],
+        options: ["am going to", "buying", "buy", "will"],
         correct: 0,
         category: "Grammar",
         modes: ["future"],
@@ -792,7 +792,7 @@ const questionDatabase = [
     {
         id: 508,
         question: "The train ______ at 6 PM.",
-        options: [ "has left", "leaves", "will leave", "is leaving" ],
+        options: ["has left", "leaves", "will leave", "is leaving"],
         correct: 1,
         category: "Grammar",
         modes: ["future"],
@@ -801,7 +801,7 @@ const questionDatabase = [
     {
         id: 509,
         question: "I promise I ______ tell anyone.",
-        options: [ "not going to", "am not", "don't", "won't" ],
+        options: ["not going to", "am not", "don't", "won't"],
         correct: 3,
         category: "Grammar",
         modes: ["future"],
@@ -810,7 +810,7 @@ const questionDatabase = [
     {
         id: 510,
         question: "______ I carry your bag?",
-        options: [ "Must", "Will", "Do", "Shall" ],
+        options: ["Must", "Will", "Do", "Shall"],
         correct: 3,
         category: "Grammar",
         modes: ["future"],
@@ -822,7 +822,7 @@ const questionDatabase = [
     {
         id: 31,
         question: "Professional 'Greeting' in email:",
-        options: [ "Smith,", "Dear Mr. Smith,", "Hi Smith,", "Hey!" ],
+        options: ["Smith,", "Dear Mr. Smith,", "Hi Smith,", "Hey!"],
         correct: 1,
         category: "Professional Communication",
         modes: ["general"],
@@ -831,7 +831,7 @@ const questionDatabase = [
     {
         id: 32,
         question: "Meaning of 'Deadline':",
-        options: [ "The start of a project", "A meeting point", "A dead telephone line", "The final date to complete a task" ],
+        options: ["The start of a project", "A meeting point", "A dead telephone line", "The final date to complete a task"],
         correct: 3,
         category: "Vocabulary",
         modes: ["general"],
@@ -840,7 +840,7 @@ const questionDatabase = [
     {
         id: 33,
         question: "Opposite of 'Increase':",
-        options: [ "Decrease", "Raise", "Expand", "Incline" ],
+        options: ["Decrease", "Raise", "Expand", "Incline"],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -851,7 +851,7 @@ const questionDatabase = [
     {
         id: 111,
         question: "The lights are off. They ______ be home.",
-        options: [ "needn't", "can't", "shouldn't", "mustn't" ],
+        options: ["needn't", "can't", "shouldn't", "mustn't"],
         correct: 1,
         category: "Grammar",
         modes: ["modals", "general"],
@@ -860,7 +860,7 @@ const questionDatabase = [
     {
         id: 112,
         question: "I ______ swim when I was 5.",
-        options: [ "should", "can", "must", "could" ],
+        options: ["should", "can", "must", "could"],
         correct: 3,
         category: "Grammar",
         modes: ["modals", "general"],
@@ -869,7 +869,7 @@ const questionDatabase = [
     {
         id: 113,
         question: "You ______ look tired. Go to sleep.",
-        options: [ "must", "have to", "can", "should" ],
+        options: ["must", "have to", "can", "should"],
         correct: 3,
         category: "Grammar",
         modes: ["modals"],
@@ -880,7 +880,7 @@ const questionDatabase = [
     {
         id: 211,
         question: "She called ______ yesterday.",
-        options: [ "him", "himself", "his", "he" ],
+        options: ["him", "himself", "his", "he"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns", "general"],
@@ -889,7 +889,7 @@ const questionDatabase = [
     {
         id: 212,
         question: "The CEO ______ announced the news.",
-        options: [ "his", "he", "him", "himself" ],
+        options: ["his", "he", "him", "himself"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -898,7 +898,7 @@ const questionDatabase = [
     {
         id: 213,
         question: "______ are my files over there.",
-        options: [ "These", "That", "Those", "This" ],
+        options: ["These", "That", "Those", "This"],
         correct: 2,
         category: "Grammar",
         modes: ["pronouns"],
@@ -909,7 +909,7 @@ const questionDatabase = [
     {
         id: 311,
         question: "While I ______ working, the power went out.",
-        options: [ "were", "was", "had", "am" ],
+        options: ["were", "was", "had", "am"],
         correct: 1,
         category: "Grammar",
         modes: ["tenses", "general"],
@@ -918,7 +918,7 @@ const questionDatabase = [
     {
         id: 312,
         question: "I ______ him since 2010.",
-        options: [ "am knowing", "know", "knew", "have known" ],
+        options: ["am knowing", "know", "knew", "have known"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -927,7 +927,7 @@ const questionDatabase = [
     {
         id: 313,
         question: "He ______ be 30 next month.",
-        options: [ "is", "shall", "is going to", "will" ],
+        options: ["is", "shall", "is going to", "will"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses", "future"],
@@ -938,7 +938,7 @@ const questionDatabase = [
     {
         id: 411,
         question: "You are coming, ______?",
-        options: [ "won't you", "isn't it", "don't you", "aren't you" ],
+        options: ["won't you", "isn't it", "don't you", "aren't you"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed", "general"],
@@ -947,7 +947,7 @@ const questionDatabase = [
     {
         id: 412,
         question: "I'm interested ______ learning more.",
-        options: [ "at", "on", "in", "about" ],
+        options: ["at", "on", "in", "about"],
         correct: 2,
         category: "Grammar",
         modes: ["mixed"],
@@ -956,7 +956,7 @@ const questionDatabase = [
     {
         id: 413,
         question: "This report is ______ than the last one.",
-        options: [ "better", "more good", "best", "gooder" ],
+        options: ["better", "more good", "best", "gooder"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -967,7 +967,7 @@ const questionDatabase = [
     {
         id: 511,
         question: "The meeting ______ at 9:00 AM.",
-        options: [ "will start", "start", "is starting", "starts" ],
+        options: ["will start", "start", "is starting", "starts"],
         correct: 3,
         category: "Grammar",
         modes: ["future", "general"],
@@ -976,7 +976,7 @@ const questionDatabase = [
     {
         id: 512,
         question: "I ______ lunch with the client tomorrow.",
-        options: [ "will have", "am having", "had", "have" ],
+        options: ["will have", "am having", "had", "have"],
         correct: 1,
         category: "Grammar",
         modes: ["future"],
@@ -985,7 +985,7 @@ const questionDatabase = [
     {
         id: 513,
         question: "In 2050, cars ______ fly.",
-        options: [ "are going to", "can", "will", "must" ],
+        options: ["are going to", "can", "will", "must"],
         correct: 2,
         category: "Grammar",
         modes: ["future"],
@@ -997,7 +997,7 @@ const questionDatabase = [
     {
         id: 34,
         question: "Synonym of 'Fast':",
-        options: [ "Quick", "Calm", "Slow", "Steady" ],
+        options: ["Quick", "Calm", "Slow", "Steady"],
         correct: 0,
         category: "Vocabulary",
         modes: ["general"],
@@ -1006,7 +1006,7 @@ const questionDatabase = [
     {
         id: 35,
         question: "What do you use to staple papers?",
-        options: [ "Glue", "Scissors", "Ruler", "Stapler" ],
+        options: ["Glue", "Scissors", "Ruler", "Stapler"],
         correct: 3,
         category: "Vocabulary",
         modes: ["general"],
@@ -1015,7 +1015,7 @@ const questionDatabase = [
     {
         id: 36,
         question: "'To call off' means...",
-        options: [ "To shout", "To telephone", "To visit", "To cancel" ],
+        options: ["To shout", "To telephone", "To visit", "To cancel"],
         correct: 3,
         category: "Vocabulary",
         modes: ["general"],
@@ -1024,7 +1024,7 @@ const questionDatabase = [
     {
         id: 37,
         question: "Antonym of 'Professional':",
-        options: [ "Qualified", "Skilled", "Expert", "Amateur" ],
+        options: ["Qualified", "Skilled", "Expert", "Amateur"],
         correct: 3,
         category: "Vocabulary",
         modes: ["general"],
@@ -1033,7 +1033,7 @@ const questionDatabase = [
     {
         id: 38,
         question: "'Thanks a lot' is...",
-        options: [ "Legal", "Formal", "Academic", "Informal" ],
+        options: ["Legal", "Formal", "Academic", "Informal"],
         correct: 3,
         category: "Communication",
         modes: ["general"],
@@ -1044,7 +1044,7 @@ const questionDatabase = [
     {
         id: 114,
         question: "It ______ be true, but I doubt it.",
-        options: [ "can't", "should", "might", "must" ],
+        options: ["can't", "should", "might", "must"],
         correct: 2,
         category: "Grammar",
         modes: ["modals"],
@@ -1053,7 +1053,7 @@ const questionDatabase = [
     {
         id: 115,
         question: "You ______ eat so much sugar.",
-        options: [ "mustn't", "can't", "don't have to", "shouldn't" ],
+        options: ["mustn't", "can't", "don't have to", "shouldn't"],
         correct: 3,
         category: "Grammar",
         modes: ["modals"],
@@ -1062,7 +1062,7 @@ const questionDatabase = [
     {
         id: 116,
         question: "______ you pass the salt, please?",
-        options: [ "Might", "Could", "Should", "Must" ],
+        options: ["Might", "Could", "Should", "Must"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -1071,7 +1071,7 @@ const questionDatabase = [
     {
         id: 117,
         question: "I ______ go to the bank, I have no cash.",
-        options: [ "may", "have to", "can", "should" ],
+        options: ["may", "have to", "can", "should"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -1080,7 +1080,7 @@ const questionDatabase = [
     {
         id: 118,
         question: "She's late. She ______ missed the bus.",
-        options: [ "can have", "must have", "would have", "should have" ],
+        options: ["can have", "must have", "would have", "should have"],
         correct: 1,
         category: "Grammar",
         modes: ["modals"],
@@ -1091,7 +1091,7 @@ const questionDatabase = [
     {
         id: 214,
         question: "He cut ______ while cooking.",
-        options: [ "himself", "his", "he", "him" ],
+        options: ["himself", "his", "he", "him"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -1100,7 +1100,7 @@ const questionDatabase = [
     {
         id: 215,
         question: "The place ______ we met.",
-        options: [ "which", "who", "when", "where" ],
+        options: ["which", "who", "when", "where"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -1109,7 +1109,7 @@ const questionDatabase = [
     {
         id: 216,
         question: "Don't wait for ______.",
-        options: [ "we", "us", "our", "ours" ],
+        options: ["we", "us", "our", "ours"],
         correct: 1,
         category: "Grammar",
         modes: ["pronouns"],
@@ -1118,7 +1118,7 @@ const questionDatabase = [
     {
         id: 217,
         question: "Is this pen ______?",
-        options: [ "yours", "your", "my", "you" ],
+        options: ["yours", "your", "my", "you"],
         correct: 0,
         category: "Grammar",
         modes: ["pronouns"],
@@ -1127,7 +1127,7 @@ const questionDatabase = [
     {
         id: 218,
         question: "There is ______ in the fridge.",
-        options: [ "any", "anything", "no", "nothing" ],
+        options: ["any", "anything", "no", "nothing"],
         correct: 3,
         category: "Grammar",
         modes: ["pronouns"],
@@ -1138,7 +1138,7 @@ const questionDatabase = [
     {
         id: 314,
         question: "She ______ (just) arrived.",
-        options: [ "has just", "did just", "is just", "just has" ],
+        options: ["has just", "did just", "is just", "just has"],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
@@ -1147,7 +1147,7 @@ const questionDatabase = [
     {
         id: 315,
         question: "They ______ playing chess at 8pm.",
-        options: [ "was", "did", "were", "are" ],
+        options: ["was", "did", "were", "are"],
         correct: 2,
         category: "Grammar",
         modes: ["tenses"],
@@ -1156,7 +1156,7 @@ const questionDatabase = [
     {
         id: 316,
         question: "He usually ______ coffee.",
-        options: [ "drinks", "drank", "is drinking", "drink" ],
+        options: ["drinks", "drank", "is drinking", "drink"],
         correct: 0,
         category: "Grammar",
         modes: ["tenses"],
@@ -1165,7 +1165,7 @@ const questionDatabase = [
     {
         id: 317,
         question: "When I arrived, the movie ______ already started.",
-        options: [ "was", "has", "did", "had" ],
+        options: ["was", "has", "did", "had"],
         correct: 3,
         category: "Grammar",
         modes: ["tenses"],
@@ -1174,7 +1174,7 @@ const questionDatabase = [
     {
         id: 318,
         question: "I ______ this music.",
-        options: [ "was loving", "love", "am loving", "been loving" ],
+        options: ["was loving", "love", "am loving", "been loving"],
         correct: 1,
         category: "Grammar",
         modes: ["tenses"],
@@ -1185,7 +1185,7 @@ const questionDatabase = [
     {
         id: 414,
         question: "I'm good at ______.",
-        options: [ "drawing", "to draw", "draw", "drew" ],
+        options: ["drawing", "to draw", "draw", "drew"],
         correct: 0,
         category: "Grammar",
         modes: ["mixed"],
@@ -1194,7 +1194,7 @@ const questionDatabase = [
     {
         id: 415,
         question: "I want ______ travel.",
-        options: [ "at", "to", "in", "for" ],
+        options: ["at", "to", "in", "for"],
         correct: 1,
         category: "Grammar",
         modes: ["mixed"],
@@ -1203,7 +1203,7 @@ const questionDatabase = [
     {
         id: 416,
         question: "Depends ______ the weather.",
-        options: [ "in", "from", "on", "of" ],
+        options: ["in", "from", "on", "of"],
         correct: 2,
         category: "Grammar",
         modes: ["mixed"],
@@ -1212,7 +1212,7 @@ const questionDatabase = [
     {
         id: 417,
         question: "She is ______ honest person.",
-        options: [ "a", "an", "-", "the" ],
+        options: ["a", "an", "-", "the"],
         correct: 1,
         category: "Grammar",
         modes: ["mixed"],
@@ -1221,7 +1221,7 @@ const questionDatabase = [
     {
         id: 418,
         question: "I don't have ______ time.",
-        options: [ "some", "many", "a lot", "much" ],
+        options: ["some", "many", "a lot", "much"],
         correct: 3,
         category: "Grammar",
         modes: ["mixed"],
@@ -1232,7 +1232,7 @@ const questionDatabase = [
     {
         id: 514,
         question: "By 2030, I will ______ finished.",
-        options: [ "had", "have", "be", "am" ],
+        options: ["had", "have", "be", "am"],
         correct: 1,
         category: "Grammar",
         modes: ["future"],
@@ -1241,7 +1241,7 @@ const questionDatabase = [
     {
         id: 515,
         question: "I think you ______ like it.",
-        options: [ "shall", "must", "are going to", "will" ],
+        options: ["shall", "must", "are going to", "will"],
         correct: 3,
         category: "Grammar",
         modes: ["future"],
@@ -1250,7 +1250,7 @@ const questionDatabase = [
     {
         id: 516,
         question: "______ I get you a drink?",
-        options: [ "Do", "Will", "Can", "Have" ],
+        options: ["Do", "Will", "Can", "Have"],
         correct: 2,
         category: "Grammar",
         modes: ["future"],
@@ -1259,7 +1259,7 @@ const questionDatabase = [
     {
         id: 517,
         question: "We ______ to move next year.",
-        options: [ "go", "will", "are going", "shall" ],
+        options: ["go", "will", "are going", "shall"],
         correct: 2,
         category: "Grammar",
         modes: ["future"],
@@ -1268,7 +1268,7 @@ const questionDatabase = [
     {
         id: 518,
         question: "I will ______ working at 9.",
-        options: [ "am", "do", "be", "have" ],
+        options: ["am", "do", "be", "have"],
         correct: 2,
         category: "Grammar",
         modes: ["future"],
@@ -1367,6 +1367,30 @@ function setupEventListeners() {
     // Scroll to Top
     window.addEventListener('scroll', toggleScrollTopBtn);
     scrollTopBtn.addEventListener('click', scrollToTop);
+}
+
+function getQuestionsByMode(mode, count) {
+    let pool = questionDatabase.filter(q => q.modes.includes(mode));
+    shuffleArray(pool);
+
+    let selected = pool.slice(0, count);
+
+    // Shuffle options and update correct answer index for each question
+    return selected.map(q => {
+        // Clone the question to avoid modifying the original database
+        let clonedQ = JSON.parse(JSON.stringify(q));
+        let options = [...clonedQ.options];
+        let correctText = options[clonedQ.correct];
+
+        // Shuffle the options
+        shuffleArray(options);
+
+        // Find the new index of the correct answer
+        clonedQ.options = options;
+        clonedQ.correct = options.indexOf(correctText);
+
+        return clonedQ;
+    });
 }
 
 function toggleScrollTopBtn() {
